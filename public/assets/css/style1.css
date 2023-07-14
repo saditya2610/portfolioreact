@@ -85,7 +85,7 @@ body {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
-  background-image: linear-gradient(to right, #01373c, #005c63, #01373b);
+  background-image: linear-gradient(to right, #225d63, #040e9e, #07b7c4);
   /* background-color: #00565d; */
 }
 .navbar-default.small {
@@ -221,7 +221,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #b61924;
-  background: url(../img/img1.png) 50% 0 no-repeat fixed;
+  background: url(../img/bg.jpg) 50% 0 no-repeat fixed;
   background-size: cover;
   background-position: 50% 0%;
   background-repeat: no-repeat;

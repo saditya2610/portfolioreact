@@ -198,14 +198,6 @@ const Home = () => {
                         beautiful code. I specialize in custom web theme
                         development and love what I do.
                         <br />
-                        <br />
-                        Since beginning my journey as a web developer in my
-                        college days, I've done remote work for agencies,
-                        consulted for startups, and collaborated with talented
-                        people to create digital products for both business and
-                        consumer use. I'm quietly confident, naturally curious,
-                        and perpetually working on improving my chops one design
-                        problem at a time.
                       </p>
                       <a
                         className="about-link-1"
@@ -457,7 +449,7 @@ const Home = () => {
                 <div className="row main-row wow fadeIn">
                   <div className="col-md-12">
                     <div className="main-title text-center">
-                      <h3>Working Experience</h3>
+                      <h3>Experience</h3>
                       <div className="underline1"></div>
                       <div className="underline2"></div>
                       <p>
@@ -478,24 +470,54 @@ const Home = () => {
                         ></i>
                         <h3>
                           <a
-                            href="https://patelgtech.com/"
+                            href="https://www.youtube.com/@SaditAditya/videos"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ color: "#4d4d4d" }}
                           >
-                            Patel G Tech LLP
+                            Youtube
                           </a>
                         </h3>
-                        <h4> Member</h4>
-                        <h2>2019-2020</h2>
+                        <h4> Content Creator</h4>
+                        <h2>2017-Present</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          I did an internship at PATEL G TECH LLP as a
-                          Republication Team Member
+                          As a Content Creator on youtube Channel Sadit Aditya
                         </p>
                       </div>
                     </div>
+                  </div>
+                  <div className="row love-row">
+                  <div className="col-md-6 col-sm-12">
+                    <div className="exp-details" data-wow-delay=".2s">
+                      <div className="exp-hover"></div>
+                      <div className="exp-main">
+                        <i
+                          className="fa fa-building exp-icon"
+                          aria-hidden="true"
+                        ></i>
+                        <h3>
+                          <a
+                            href="https://www.youtube.com/@SaditAditya/videos"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: "#4d4d4d" }}
+                          >
+                            Dinas Perhubungan Provinsi Riau
+                          </a>
+                        </h3>
+                        <h4> Publication Service,Programmer</h4>
+                        <h2>2022-2022</h2>
+                        <div className="underline1"></div>
+                        <div className="underline2"></div>
+                        <p>
+                          I did an internship at Dinas Perhubungan Provinsi Riau as a
+                          Publication Service and Programmer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                   </div>
                   <div className="col-md-6 col-sm-12">
                     <div className="exp-details" data-wow-delay=".3s">
@@ -512,16 +534,15 @@ const Home = () => {
                             rel="noopener noreferrer"
                             style={{ color: "#4d4d4d" }}
                           >
-                            Uaguria Software
+                            Digitalent Scholarship (FGA)
                           </a>
                         </h3>
-                        <h4>Web Developer</h4>
-                        <h2>2020-2022</h2>
+                        <h4>React JS Web Development Digitalent Scholarship (FGA) </h4>
+                        <h2>2022-2022</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          At Uaguria Software, I was working as a Web Developer
-                          &amp; IT Consultant Person
+                          Working as a Web Development Using React JS
                         </p>
                       </div>
                     </div>
@@ -971,26 +992,26 @@ const Home = () => {
                     <div className="col-md-4 col-sm-6">
                       <div className="blog-main">
                         <a
-                          href="https://dev.to/sanajitjana/what-is-hooks-in-react-js-41l2"
+                          href="https://id.react.dev/learn"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <img
                             src="assets/img/blog/blog1.png"
-                            alt="React hooks were introduced in version 16.8"
+                            alt="Learn React JS"
                             className="blog-img"
                           />
                         </a>
                         <div className="blog-head">
                           <a
-                            href="https://dev.to/sanajitjana/what-is-hooks-in-react-js-41l2"
+                            href="https://id.react.dev/learn"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
                           >
                             <h3>
                               <strong>
-                                What is the importance of hooks in React JS?
+                                Learn React JS?
                               </strong>
                             </h3>
                           </a>
@@ -998,8 +1019,7 @@ const Home = () => {
                         <div className="blog-bottom">
                           <p>
                             In this article, you will learn what are hooks in
-                            React JS? and when to use react hooks? React JS is
-                            developed by Facebook in the year 2013. There are
+                            React JS? React JS is developed by Facebook in the year 2013. There are
                             many students and the new developers who have
                             confusion between react and hooks in react. Well, it
                             is not different, react is a programming language
@@ -1019,42 +1039,37 @@ const Home = () => {
                     <div className="col-md-4 col-sm-6">
                       <div className="blog-main">
                         <a
-                          href="https://dev.to/sanajitjana/the-importance-of-ui-ux-software-engineering-1n0n"
+                          href="https://www.loop11.com/13-benefits-of-ui-ux-design-for-small-businesses/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <img
                             src="assets/img/blog/blog2.png"
-                            alt="The importance of UI/UX"
+                            alt="UI/UX Design for Small Businesses"
                             className="blog-img"
                           />
                         </a>
                         <div className="blog-head">
                           <a
-                            href="https://dev.to/sanajitjana/the-importance-of-ui-ux-software-engineering-1n0n"
+                            href="https://www.loop11.com/13-benefits-of-ui-ux-design-for-small-businesses/"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
                           >
                             <h3>
                               <strong>
-                                The importance of UI/UX | Software Engineering
+                              13 Benefits of UI/UX Design for Small Businesses | Software Engineering
                               </strong>
                             </h3>
                           </a>
                         </div>
                         <div className="blog-bottom">
                           <p>
-                            UI or User Interface is the interface that is the
-                            access point where users interact with computers. It
-                            is also a way through which users can interact with
-                            a website or an application. UI design typically
-                            refers to graphical user interfaces but also
-                            includes others, such as voice-controlled ones, a
-                            keyboard and the appearance ...
+                          The modern-day shopper looks for more than just products and information. They want to associate with brands that identify and interact with them.
+                          As a small business striving to cut through the digital crowd...
                           </p>
                           <a
-                            href="https://dev.to/sanajitjana/the-importance-of-ui-ux-software-engineering-1n0n"
+                            href="https://www.loop11.com/13-benefits-of-ui-ux-design-for-small-businesses/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="about-link-2"
@@ -1113,7 +1128,7 @@ const Home = () => {
                     </div>
                     <div className="row" style={{ textAlign: "center" }}>
                       <a
-                        href="https://dev.to/sanajitjana"
+                        href="https://saditaditya.wordpress.com/"
                         target="newtab"
                         className="btn btn-warning"
                         style={{

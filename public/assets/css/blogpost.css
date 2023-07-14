@@ -278,7 +278,7 @@ body{
 
 
 .section:nth-of-type(1) {
-    background: whitesmoke;
+    background: rgb(192, 25, 25);
     height: 100vh;
 }
 .section {
