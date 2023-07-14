@@ -387,10 +387,7 @@ const Home = () => {
                     <div className="resume-details" data-wow-delay=".3s">
                       <div className="resume-hover"></div>
                       <div className="resume-main">
-                        <i
-                          className="fa fa-graduation-cap resume-icon"
-                          aria-hidden="true"
-                        ></i>
+                        <i className="fa fa-graduation-cap resume-icon"aria-hidden="true"></i>
                         <h3>Graduation</h3>
                         <h2>2019-2023</h2>
                         <div className="underline1"></div>
@@ -414,29 +411,49 @@ const Home = () => {
                     <div className="resume-details" data-wow-delay=".4s">
                       <div className="resume-hover"></div>
                       <div className="resume-main">
-                        <i
-                          className="fa fa-graduation-cap resume-icon"
-                          aria-hidden="true"
-                        ></i>
+                        <i className="fa fa-graduation-cap resume-icon" aria-hidden="true"></i>
                         <h3>Training &amp; Skill</h3>
                         <h2>2022-2022</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          Currently learning Full-Stack Web Development from{" "}
+                          Currently learning Frontend Web Development from{" "}
                           <a
-                            href="https://masaischool.com/"
+                            href="https://digitalent.kominfo.go.id/akademi/FGA"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            Masai School
+                            Digitalent Scholarship From Kominfo (FGA)
                           </a>
-                          , Bengaluru, India.
+                          , Indonesia.
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div className="col-md-4 col-sm-4">
+                    <div className="resume-details" data-wow-delay=".4s">
+                      <div className="resume-hover"></div>
+                      <div className="resume-main">
+                        <i className="fa fa-graduation-cap resume-icon" aria-hidden="true"></i>
+                        <h3>Training &amp; Skill</h3>
+                        <h2>2022-2022</h2>
+                        <div className="underline1"></div>
+                        <div className="underline2"></div>
+                        <p>
+                        Train4best Certified Global Metaverse Engineer Associate Exam{" "}
+                          <a
+                            href="https://home-pearsonvue-com.translate.goog/Clients/Train4best.aspx?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tc"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Digitalent Scholarship From Kominfo (FGA) & Train4Best
+                          </a>
+                          , Indonesia.
+                        </p>
+                      </div>
+                    </div>
+                    </div>
                 <div className="row main-row wow fadeIn">
                   <div className="col-md-12">
                     <div className="main-title text-center">
@@ -469,7 +486,7 @@ const Home = () => {
                             Patel G Tech LLP
                           </a>
                         </h3>
-                        <h4>Repub Member</h4>
+                        <h4> Member</h4>
                         <h2>2019-2020</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
@@ -879,7 +896,7 @@ const Home = () => {
                                 <div className="active item">
                                   <blockquote>
                                     <p>
-                                      “Sanajit was a real pleasure to work with
+                                      "Sadit was a real pleasure to work with
                                       and we look forward to working with him
                                       again. He’s definitely the kind of
                                       developer you can trust with a project
@@ -989,7 +1006,7 @@ const Home = () => {
                             and hooks is ...
                           </p>
                           <a
-                            href="https://dev.to/sanajitjana/what-is-hooks-in-react-js-41l2"
+                            href="https://id.react.dev/learn"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="about-link-2"
