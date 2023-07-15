@@ -37,26 +37,26 @@ function Header() {
                     <ul className="nav navbar-nav">
                       <li>
                         <a href="/#home" className="active">
-                          Home
+                          Beranda
                         </a>
                       </li>
                       <li>
-                        <a href="/#about">About</a>
+                        <a href="/#about">Tentang</a>
                       </li>
                       <li>
-                        <a href="/#skill">Skill</a>
+                        <a href="/#skill">Kemampuan</a>
                       </li>
                       <li>
-                        <a href="/#resume">Education</a>
+                        <a href="/#resume">Pendidikan</a>
                       </li>
                       <li>
-                        <a href="/#service">Service</a>
+                        <a href="/#service">Pelayanan</a>
                       </li>
                       <li>
                         <a href="/#blog">Blog</a>
                       </li>
                       <li>
-                        <a href="/#contact">Contact</a>
+                        <a href="/#contact">Kontak</a>
                       </li>
                     </ul>
                   </div>

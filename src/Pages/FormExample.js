@@ -87,7 +87,7 @@ const FormExample = () => {
                           and do checkout this
                           <a
                             href="#"
-                            title="Laravel Curd"
+                            title="Laravel Crud"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
