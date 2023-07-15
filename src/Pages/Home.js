@@ -26,7 +26,7 @@ const Home = () => {
                         <ul className="about-social">
                           <li className="wow fadeIn" data-wow-delay=".4s">
                             <a
-                              href="https://www.linkedin.com/in/sanajitjana01"
+                              href="https://www.linkedin.com/in/surya-aditya-gd-33306821b/"
                               target="newtab"
                             >
                               <i
@@ -37,7 +37,7 @@ const Home = () => {
                           </li>
                           <li className="wow fadeIn" data-wow-delay=".2s">
                             <a
-                              href="https://github.com/sanajitjana"
+                              href="https://github.com/saditya2610"
                               target="newtab"
                             >
                               <i
@@ -48,7 +48,7 @@ const Home = () => {
                           </li>
                           <li className="wow fadeIn" data-wow-delay=".6s">
                             <a
-                              href="https://www.instagram.com/sanajitjana01/"
+                              href="https://www.instagram.com/dirgantaras/"
                               target="newtab"
                             >
                               <i
@@ -59,21 +59,13 @@ const Home = () => {
                           </li>
                           <li className="wow fadeIn" data-wow-delay=".8s">
                             <a
-                              href="https://twitter.com/sanajitjana01"
+                              href="#"
                               target="newtab"
                             >
                               <i
                                 className="fa fa-twitter"
                                 aria-hidden="true"
                               ></i>
-                            </a>
-                          </li>
-                          <li className="wow fadeIn" data-wow-delay="1s">
-                            <a
-                              href="https://dev.to/sanajitjana"
-                              target="newtab"
-                            >
-                              <i className="fa fa-book" aria-hidden="true"></i>
                             </a>
                           </li>
                         </ul>
@@ -189,7 +181,7 @@ const Home = () => {
                         building everything from small business sites to rich
                         interactive web apps. if you are a business seeking a
                         web presence or an employer looking to hire, you can get
-                        in touch with me{" "}
+                        in touch with me
                         <a className="underline2" href="#contact">
                           {" "}
                           here.
@@ -319,7 +311,7 @@ const Home = () => {
                             <h3>UI / UX - 92%</h3>
                           </li>
                           <li>
-                            <h3>React JS - 70%</h3>
+                            <h3>React JS - 80%</h3>
                           </li>
                           <li>
                             <h3>PHP (Laravel) - 50%</h3>
@@ -499,7 +491,7 @@ const Home = () => {
                         ></i>
                         <h3>
                           <a
-                            href="https://www.youtube.com/@SaditAditya/videos"
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ color: "#4d4d4d" }}
@@ -529,7 +521,7 @@ const Home = () => {
                         ></i>
                         <h3>
                           <a
-                            href="https://uaguria.com/"
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ color: "#4d4d4d" }}

@@ -55,7 +55,7 @@ const FormExample = () => {
                           class="fa fa-calendar blog-icon"
                           aria-hidden="true"
                         ></i>
-                        <h2>28 September 2021</h2>
+                        <h2>28 September 2022</h2>
                       </div>
                       <div className="blog-bottom">
                         <p>
@@ -77,8 +77,8 @@ const FormExample = () => {
                         <p>
                           Visit my
                           <a
-                            href="https://github.com/sanajitjana"
-                            title="Sanajit Jana"
+                            href="#"
+                            title="Sadit"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -86,7 +86,7 @@ const FormExample = () => {
                           </a>
                           and do checkout this
                           <a
-                            href="https://github.com/sanajitjana/laravel-curd"
+                            href="#"
                             title="Laravel Curd"
                             target="_blank"
                             rel="noopener noreferrer"
