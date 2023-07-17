@@ -193,12 +193,12 @@ const Home = () => {
                       </p>
                       <a
                         className="about-link-1"
-                        href="assets/cv/Curriculum Vitae Surya Aditya GD.pdf"
+                        href="assets/cv/CV Surya Aditya GD Informatic Engineering.pdf"
                         target="_blank"
                       >
-                        See Resume
+                        See My CV
                       </a>
-                      <a className="about-link-2" href="#contact">
+                      <a className="about-link-2" href="https://wa.me/6289643119126">
                         Hire Me
                       </a>
                     </div>
@@ -219,7 +219,7 @@ const Home = () => {
                         <h3 className="Count">0021</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
-                        <p>Web Design Completed</p>
+                        <p>Web Design Completed For Mini Project</p>
                       </div>
                     </div>
                     <div className="col-md-3 col-sm-6">
@@ -231,7 +231,7 @@ const Home = () => {
                         <h3 className="Count">0040</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
-                        <p>UI/UX Design Done</p>
+                        <p>Graphic Design</p>
                       </div>
                     </div>
                     <div className="col-md-3 col-sm-6">
@@ -240,7 +240,7 @@ const Home = () => {
                           className="fa fa-bolt stat-icon"
                           aria-hidden="true"
                         ></i>
-                        <h3 className="Count">0015</h3>
+                        <h3 className="Count">0005</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>Website Created</p>
