@@ -545,8 +545,8 @@ section:nth-of-type(2) {
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
   border: 1px solid white;
+  margin-right: 0px;
   margin-left: 20px;
-  margin-right: 20px;
   box-shadow: 5px 5px 27px 0px #cecece;
 }
 .about-link-3:hover {
@@ -2647,7 +2647,7 @@ blockquote {
     -ms-transition: 0.4s;
     border: 1px solid white;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     box-shadow: 5px 5px 27px 0px #cecece;
   }
   .testimonial-content {

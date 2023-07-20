@@ -202,7 +202,7 @@ const Home = () => {
                         Hire Me
                       </a>
                       <a className="about-link-3" href="assets/cv/Portfolio Surya Aditya GD.pdf">
-                       Download My Short Portfolio
+                       My Short Portfolio
                       </a>
                       </div>
                     </div>
@@ -1076,7 +1076,7 @@ const Home = () => {
                         >
                           <img
                             src="assets/img/blog/tokogame.png"
-                            alt="UI/UX Design for Small Businesses"
+                            alt="tokogame"
                             className="blog-img"
                           />
                         </a>
