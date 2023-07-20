@@ -291,15 +291,11 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="skill-details text-left">
                     <p>
-                      UI/UX involves planning and iterating a site's structure
-                      and layout. Once the proper information architecture is in
-                      place, I design the visual layer to create a beautiful
-                      user experience. Front End Development is building out the
-                      visual components of a website. Using HTML, CSS, and
-                      Javascript, I build fast, interactive websites. This also
-                      may include a CMS, apis, or other integrations. The work
-                      that I am most interested in is 0-1 work (helping you get
-                      your idea into the world).
+                    UI/UX melibatkan perencanaan dan pengulangan struktur dan tata letak situs. Setelah arsitektur informasi yang tepat tersedia, saya mendesain lapisan visual untuk menciptakan keindahan 
+                    pengalaman pengguna. Front End Development sedang membangun komponen visual dari sebuah situs web. Menggunakan HTML, CSS, dan
+                    Javascript, saya membuat situs web yang cepat dan interaktif. Ini juga 
+                    mungkin termasuk CMS, apis, atau integrasi lainnya. Pekerjaan yang paling saya minati adalah pekerjaan 0-1 
+                    (membantu Anda mendapatkan ide Anda).
                     </p>
                   </div>
                 </div>
@@ -315,10 +311,10 @@ const Home = () => {
                             <h3>UI / UX - 92%</h3>
                           </li>
                           <li>
-                            <h3>React JS - 80%</h3>
+                            <h3>React JS - 90%</h3>
                           </li>
                           <li>
-                            <h3>PHP (Laravel) - 50%</h3>
+                            <h3>PHP (Laravel) - 80%</h3>
                           </li>
                           <li>
                             <h3>MySQL - 95%</h3>
@@ -705,7 +701,7 @@ const Home = () => {
 
         {/* <!-- ============================================== SERVICE ===================================================== --> */}
 
-        <div id="service">
+         <div id="service">
           <div className="service-content">
             <div className="service-grid text-center">
               <div className="container">
@@ -745,7 +741,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-4 col-sm-6">
+                  {/*<div className="col-md-4 col-sm-6">
                     <div className="service-details" data-wow-delay=".1s">
                       <div className="service-head">
                         <img
@@ -767,7 +763,7 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div>*/}
                   <div className="col-md-4 col-sm-6">
                     <div className="service-details" data-wow-delay=".1s">
                       <div className="service-head">
