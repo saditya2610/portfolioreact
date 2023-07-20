@@ -155,22 +155,22 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
-            <div className="about-back"></div>
+            <div id="profil">
+            <div className="profil"></div>
             <div className="me-grid">
               <div className="container">
                 <div className="row">
                   <div className="col-md-4 col-sm-6 col-xs-12 about-col">
-                    <div className="about-image">
+                    <div className="profil-image">
                       <img
                         src="assets/img/Foto Surya Aditya.png"
-                        alt="sanajit-jana"
-                        className="about-img wow fadeIn"
+                        alt="saditaditya"
+                        className="profil-img wow fadeIn"
                       />
                     </div>
                   </div>
                   <div className="col-md-8 col-sm-6 col-xs-12 about-col">
-                    <div className="about-details wow fadeIn">
+                    <div className="profil-details wow fadeIn">
                       <div className="main-title left-title text-left wow fadeIn">
                         <h3>Hello! My Name's Surya Aditya also known as Sadit Aditya</h3>
                         <div className="underline1 no-margin"></div>
@@ -182,7 +182,7 @@ const Home = () => {
                         interactive web apps. if you are a business seeking a
                         web presence or an employer looking to hire, you can get
                         in touch with me
-                        <a className="underline2" href="#contact">
+                        <a className="underline2" href="https://wa.me/6289643119126">
                           {" "}
                           here.
                         </a>{" "}
@@ -201,6 +201,10 @@ const Home = () => {
                       <a className="about-link-2" href="https://wa.me/6289643119126">
                         Hire Me
                       </a>
+                      <a className="about-link-3" href="assets/cv/Portfolio Surya Aditya GD.pdf">
+                       Download My Short Portfolio
+                      </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -866,7 +870,7 @@ const Home = () => {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="main-title text-center wow fadeIn">
-                          <h3>Testimonials</h3>
+                          <h3>Testimoni</h3>
                           <div className="underline1"></div>
                           <div className="underline2"></div>
                           <p>
@@ -915,15 +919,14 @@ const Home = () => {
                                       developer you can trust with a project
                                       from start to finish.”
                                       <br />
-                                      <span>Ishrak Chaudhury</span>
+                                      <span>Isra </span>
                                     </p>
                                   </blockquote>
                                 </div>
                                 <div className="item">
                                   <blockquote>
                                     <p>
-                                      “Sadit's a clear communicator with the
-                                      tenacity and confidence to really dig in
+                                      “Sadit's a confidence to really dig in
                                       to tricky design scenarios and the
                                       collaborative friction that's needed to
                                       produce excellent work.”
@@ -1013,9 +1016,7 @@ const Home = () => {
                             In this article, you will learn what are hooks in
                             React JS? React JS is developed by Facebook in the year 2013. There are
                             many students and the new developers who have
-                            confusion between react and hooks in react. Well, it
-                            is not different, react is a programming language
-                            and hooks is ...
+                            confusion between react and hooks in react.
                           </p>
                           <a
                             href="https://id.react.dev/learn"
@@ -1071,53 +1072,7 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-4 col-sm-6">
-                      <div className="blog-main">
-                        <a
-                          href="https://dev.to/sanajitjana/form-example-in-laravel-8-45oc"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src="assets/img/blog/blog3.png"
-                            alt="blog-img"
-                            className="blog-img"
-                          />
-                        </a>
-                        <div className="blog-head">
-                          <a
-                            href="https://dev.to/sanajitjana/form-example-in-laravel-8-45oc"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ textDecoration: "none" }}
-                          >
-                            <h3>
-                              <strong>Form Example in Laravel 8</strong>
-                            </h3>
-                          </a>
-                        </div>
-                        <div className="blog-bottom">
-                          <p>
-                            Laravel 8 form example tutorial. In this post, i
-                            will teach from starting on how to send form data on
-                            controller and how to insert form data in database
-                            using laravel 8. If you are trying to create form
-                            and want to insert form data into database using
-                            laravel 8 latest version. So this post will help you
-                            to do this. Because in this post example, i will
-                            create contact-list ...
-                          </p>
-                          <a
-                            href="https://dev.to/sanajitjana/form-example-in-laravel-8-45oc"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="about-link-2"
-                          >
-                            Read More
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    
                     <div className="row" style={{ textAlign: "center" }}>
                       <a
                         href="https://saditaditya.wordpress.com/"
@@ -1314,16 +1269,16 @@ const Home = () => {
                           className="fa fa-mobile contact-icon"
                           aria-hidden="true"
                         ></i>
-                        <h3>Phone</h3>
+                        <h3>Phone(Whatsapp)</h3>
                         <a
-                          href="tel:8372876775"
+                          href="https://wa.me/6289643119126"
                           style={{
                             color: "black",
                             textDecoration: "none",
                             fontSize: "17px",
                           }}
                         >
-                          +6288888
+                          +6289643119126
                         </a>
                       </div>
                     </div>
@@ -1334,7 +1289,7 @@ const Home = () => {
                           aria-hidden="true"
                         ></i>
                         <h3>Portfolio</h3>
-                        <p>SOON</p>
+                        <a href="/#profil" >Click Here</a>
                       </div>
                     </div>
                   </div>

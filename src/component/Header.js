@@ -44,6 +44,9 @@ function Header() {
                         <a href="/#about">Tentang</a>
                       </li>
                       <li>
+                        <a href="/#profil">Profil</a>
+                      </li>
+                      <li>
                         <a href="/#skill">Kemampuan</a>
                       </li>
                       <li>

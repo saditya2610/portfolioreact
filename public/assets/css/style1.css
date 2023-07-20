@@ -406,7 +406,7 @@ section:nth-of-type(2) {
   color: #efd236;
 }
 
-.about-back {
+.profil {
   width: 60%;
   height: 800px;
   position: absolute;
@@ -422,10 +422,10 @@ section:nth-of-type(2) {
 .about-col {
   padding: 0px;
 }
-.about-image {
+.profil-image {
   margin: 0px 16px;
 }
-.about-img {
+.profil-img {
   width: 100%;
   height: auto;
   padding: 0px;
@@ -471,12 +471,12 @@ section:nth-of-type(2) {
 .about-social li a:hover {
   color: #005960;
 }
-.about-details {
+.profil-details {
   margin: 0px 30px;
   margin-left: 20px;
 }
 
-.about-details p {
+.profil-details p {
   font-size: 16px;
   color: #363636;
   letter-spacing: 1px;
@@ -527,6 +527,29 @@ section:nth-of-type(2) {
   box-shadow: 5px 5px 27px 0px #cecece;
 }
 .about-link-2:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #efd236;
+  border: 1px solid #efd236;
+}
+.about-link-3 {
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  padding: 13px 18px;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  border: 1px solid white;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 5px 5px 27px 0px #cecece;
+}
+.about-link-3:hover {
   text-decoration: none;
   color: black;
   background-color: #efd236;
@@ -2310,7 +2333,7 @@ blockquote {
 /*=============================================================== RESPONSIVE ======================================================*/
 
 @media screen and (max-width: 768px) {
-  .about-details {
+  .profil-details {
     margin: 42px 16px;
     margin-top: 0px;
   }
@@ -2357,7 +2380,7 @@ blockquote {
     padding-bottom: 0px;
     margin-bottom: 0px;
   }
-  .about-details p {
+  .profil-details p {
     font-size: 16px;
     color: #363636;
     letter-spacing: 1px;
@@ -2372,7 +2395,7 @@ blockquote {
   .navbar-default.small .navbar-nav > li > a {
     color: white;
   }
-  .about-details {
+  .profil-details {
     margin: 42px 16px;
   }
   .work-counter {
@@ -2575,7 +2598,7 @@ blockquote {
     width: 100%;
   }
 
-  .about-details {
+  .profil-details {
     margin: 40px 15px;
   }
   .about-link-1 {
@@ -2608,6 +2631,23 @@ blockquote {
     -ms-transition: 0.4s;
     border: 1px solid white;
     margin-right: 0px;
+    box-shadow: 5px 5px 27px 0px #cecece;
+  }
+  .about-link-3 {
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    padding: 13px 9px;
+    position: relative;
+    border-radius: 5px;
+    transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    border: 1px solid white;
+    margin-left: 20px;
+    margin-right: 20px;
     box-shadow: 5px 5px 27px 0px #cecece;
   }
   .testimonial-content {
