@@ -1032,37 +1032,36 @@ const Home = () => {
                     <div className="col-md-4 col-sm-6">
                       <div className="blog-main">
                         <a
-                          href="https://www.loop11.com/13-benefits-of-ui-ux-design-for-small-businesses/"
+                          href="https://saditaditya.wordpress.com/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <img
-                            src="assets/img/blog/blog2.png"
-                            alt="UI/UX Design for Small Businesses"
+                            src="assets/img/blog/saditadityawordpress.png"
+                            alt="saditadityawordpress"
                             className="blog-img"
                           />
                         </a>
                         <div className="blog-head">
                           <a
-                            href="https://www.loop11.com/13-benefits-of-ui-ux-design-for-small-businesses/"
+                            href="https://saditaditya.wordpress.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
                           >
                             <h3>
                               <strong>
-                              13 Benefits of UI/UX Design for Small Businesses | Software Engineering
+                              Wordpress | Sadit Aditya
                               </strong>
                             </h3>
                           </a>
                         </div>
                         <div className="blog-bottom">
                           <p>
-                          The modern-day shopper looks for more than just products and information. They want to associate with brands that identify and interact with them.
-                          As a small business striving to cut through the digital crowd...
+                          Membahas seputar SADIT ADITYA..
                           </p>
                           <a
-                            href="https://www.loop11.com/13-benefits-of-ui-ux-design-for-small-businesses/"
+                            href="https://saditaditya.wordpress.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="about-link-2"
@@ -1072,7 +1071,49 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    
+                    <div className="col-md-4 col-sm-6">
+                      <div className="blog-main">
+                        <a
+                          href="https://saditaditya.wordpress.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="assets/img/blog/tokogame.png"
+                            alt="UI/UX Design for Small Businesses"
+                            className="blog-img"
+                          />
+                        </a>
+                        <div className="blog-head">
+                          <a
+                            href="https://saditya2610.github.io/tokogame.github.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <h3>
+                              <strong>
+                              Toko Game | HTML CSS Bootstrap
+                              </strong>
+                            </h3>
+                          </a>
+                        </div>
+                        <div className="blog-bottom">
+                          <p>
+                          menjadi salah satu toko game yang dikenal di berbagai komunitas gamer di Indonesia karena layanannya yang selalu mengutamakan kepuasan pelanggan untuk mendapatkan 
+                          harga dan produk yang murah, bersaing, dan terbaik!
+                          </p>
+                          <a
+                            href="https://saditya2610.github.io/tokogame.github.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="about-link-2"
+                          >
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                     <div className="row" style={{ textAlign: "center" }}>
                       <a
                         href="https://saditaditya.wordpress.com/"
