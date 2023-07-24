@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 const Home = () => {
@@ -163,7 +164,7 @@ const Home = () => {
                   <div className="col-md-4 col-sm-6 col-xs-12 about-col">
                     <div className="profil-image">
                       <img
-                        src="assets/img/Foto Surya Aditya.png"
+                        src="assets/img/fotosurya.png"
                         alt="saditaditya"
                         className="profil-img wow fadeIn"
                       />
@@ -202,8 +203,9 @@ const Home = () => {
                         Hire Me
                       </a>
                       <a className="about-link-3" href="assets/cv/Portfolio Surya Aditya GD.pdf">
-                       My Short Portfolio
+                       Short Portfolio
                       </a>
+                     
                       </div>
                     </div>
                   </div>
@@ -220,7 +222,7 @@ const Home = () => {
                           className="fa fa-pencil-square-o stat-icon"
                           aria-hidden="true"
                         ></i>
-                        <h3 className="Count">0021</h3>
+                        <h3 className="Count">0007</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>Web Design Completed For Mini Project</p>
@@ -244,7 +246,7 @@ const Home = () => {
                           className="fa fa-bolt stat-icon"
                           aria-hidden="true"
                         ></i>
-                        <h3 className="Count">0005</h3>
+                        <h3 className="Count">0004</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>Website Created</p>
@@ -281,8 +283,8 @@ const Home = () => {
                     <div className="underline1"></div>
                     <div className="underline2"></div>
                     <p>
-                      I value simple content structure, clean design patterns,
-                      and thoughtful interactions.
+                    Saya menghargai struktur konten yang sederhana, 
+                    pola desain yang bersih, dan interaksi yang bijaksana.
                     </p>
                   </div>
                 </div>
@@ -445,8 +447,7 @@ const Home = () => {
                       <div className="underline1"></div>
                       <div className="underline2"></div>
                       <p>
-                        I don’t like to define myself by the work I’ve done. I
-                        define myself by the work I want to do.
+                      mendefinisikan diri saya dengan pekerjaan yang ingin saya lakukan.
                       </p>
                     </div>
                   </div>
@@ -520,9 +521,7 @@ const Home = () => {
                           aria-hidden="true"
                         ></i>
                         <h3>
-                          <a
-                            href="#"
-                            target="_blank"
+                          <a href="#" target="_blank"
                             rel="noopener noreferrer"
                             style={{ color: "#4d4d4d" }}
                           >
@@ -562,9 +561,9 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <!-- ================================ WORK =============================== --> */}
+        {/* <!-- ================================ WORK =============================== --> 
 
-        {/* <div id="work">
+         <div id="work">
           <div className="work-content">
             <div className="work-grid">
               <div className="container">
@@ -586,12 +585,12 @@ const Home = () => {
                 </div>
               </div>
               <div className="container">
-                <div className="gallery" style={{ paddingTop: "80px" }}>
+                <div className="gallery" style={{ paddingTop: "100px" }}>
                   <a href="#">
                     <div className="gallery-item">
                       <img
                         className="gallery-image"
-                        src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop"
+                        src="https://user-images.githubusercontent.com/75921130/255169043-ce5f7623-7ab2-4adb-855d-2b3ad507d650.png"
                         alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
                       />
                     </div>
@@ -712,7 +711,7 @@ const Home = () => {
                       <div className="underline1"></div>
                       <div className="underline2"></div>
                       <p>
-                        I always want to make things that make a difference.
+                      Saya selalu ingin membuat hal-hal yang membuat perbedaan.
                       </p>
                     </div>
                   </div>
@@ -735,8 +734,8 @@ const Home = () => {
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          Clean, modern designs - optimized for performance,
-                          search engines, and converting users to customers.
+                        Desain bersih dan modern - dioptimalkan untuk kinerja,
+                          mesin telusur, dan mengubah pengguna menjadi pelanggan.
                         </p>
                       </div>
                     </div>
@@ -781,54 +780,7 @@ const Home = () => {
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          Get insights into who is browsing your site so that
-                          you can make smarter business decisions.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4 col-sm-6">
-                    <div className="service-details" data-wow-delay=".1s">
-                      <div className="service-head">
-                        <img
-                          src="assets/img/service/mobile-friendly.jpg"
-                          alt="mobile-friendly"
-                        />
-                      </div>
-                      <div className="service-bottom">
-                        <i
-                          className="fa fa-desktop exp-icon"
-                          aria-hidden="true"
-                        ></i>
-                        <h3>Mobile-friendly</h3>
-                        <div className="underline1"></div>
-                        <div className="underline2"></div>
-                        <p>
-                          A responsive design makes your website accessible to
-                          all users, regardless of their device.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4 col-sm-6">
-                    <div className="service-details" data-wow-delay=".1s">
-                      <div className="service-head">
-                        <img
-                          src="assets/img/service/website-audit.jpg"
-                          alt="website-audit"
-                        />
-                      </div>
-                      <div className="service-bottom">
-                        <i
-                          className="fa fa-search exp-icon"
-                          aria-hidden="true"
-                        ></i>
-                        <h3>Website Rank</h3>
-                        <div className="underline1"></div>
-                        <div className="underline2"></div>
-                        <p>
-                          Looking to improve your page performance, SEO, or user
-                          experience? Request a free site audit.
+                        Dapatkan wawasan tentang siapa yang menjelajahi situs Anda sehingga Anda dapat membuat keputusan bisnis yang lebih cerdas.
                         </p>
                       </div>
                     </div>
@@ -850,8 +802,51 @@ const Home = () => {
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          Custom theme and plugin development. Easily update
-                          site content with knowledge of powerful code.
+                        Pengembangan tema dan plugin khusus. Perbarui konten situs dengan mudah dengan pengetahuan tentang kode yang kuat.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-4 col-sm-6">
+                    <div className="service-details" data-wow-delay=".1s">
+                      <div className="service-head">
+                        <img
+                          src="assets/img/service/mobile-friendly.jpg"
+                          alt="mobile-friendly"
+                        />
+                      </div>
+                      <div className="service-bottom">
+                        <i
+                          className="fa fa-desktop exp-icon"
+                          aria-hidden="true"
+                        ></i>
+                        <h3>Mobile-friendly</h3>
+                        <div className="underline1"></div>
+                        <div className="underline2"></div>
+                        <p>
+                        Desain responsif membuat situs web Anda dapat diakses oleh semua pengguna, terlepas dari perangkat mereka.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-4 col-sm-6">
+                    <div className="service-details" data-wow-delay=".1s">
+                      <div className="service-head">
+                        <img
+                          src="assets/img/service/website-audit.jpg"
+                          alt="website-audit"
+                        />
+                      </div>
+                      <div className="service-bottom">
+                        <i
+                          className="fa fa-search exp-icon"
+                          aria-hidden="true"
+                        ></i>
+                        <h3>Website Rank</h3>
+                        <div className="underline1"></div>
+                        <div className="underline2"></div>
+                        <p>
+                        Ingin meningkatkan performa halaman, SEO, atau pengalaman pengguna Anda? Minta audit situs gratis.
                         </p>
                       </div>
                     </div>
@@ -866,7 +861,7 @@ const Home = () => {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="main-title text-center wow fadeIn">
-                          <h3>Testimoni</h3>
+                          <h3>Testimoni <br/>(ini hanyalah kata kata template yang ada di gugle)</h3>
                           <div className="underline1"></div>
                           <div className="underline2"></div>
                           <p>
@@ -959,19 +954,18 @@ const Home = () => {
 
         {/* <!-- ================================ BLOG ========================== --> */}
 
-        <div id="blog">
+        <div id="project">
           <div className="blog-content">
             <div className="blog-grid">
               <div className="container">
                 <div className="row">
                   <div className="col-md-12">
                     <div className="main-title text-center wow fadeIn">
-                      <h3>My Blog</h3>
+                      <h3>My Project</h3>
                       <div className="underline1"></div>
                       <div className="underline2"></div>
                       <p>
-                        The Blog, Which has thoughts on life, work and
-                        everything in between.
+                        Project yang setiap waktu terus menerus bakal update
                       </p>
                     </div>
                   </div>
@@ -1112,7 +1106,7 @@ const Home = () => {
                     </div>
                     <div className="row" style={{ textAlign: "center" }}>
                       <a
-                        href="https://saditaditya.wordpress.com/"
+                        href="#"
                         target="newtab"
                         className="btn btn-warning"
                         style={{
@@ -1123,7 +1117,7 @@ const Home = () => {
                           color: "black",
                         }}
                       >
-                        More Blog
+                        More Info Project (Soon)
                       </a>
                     </div>
                   </div>
@@ -1147,8 +1141,7 @@ const Home = () => {
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          I’m always open to discussing product design work or
-                          partnership opportunities.
+                        Saya selalu terbuka untuk mendiskusikan pekerjaan desain produk atau peluang kemitraan.
                         </p>
                       </div>
                     </div>

@@ -126,7 +126,7 @@ body {
   color: white;
 }
 .navbar-default .navbar-nav > li > a:hover {
-  color: #efd236;
+  color: #1daff3;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -326,7 +326,7 @@ section:nth-of-type(2) {
 .underline1 {
   height: 2px;
   width: 100px;
-  background-color: #efd236;
+  background-color: #1daff3;
   margin: auto;
   margin-top: 20px;
   position: relative;
@@ -334,7 +334,7 @@ section:nth-of-type(2) {
 .underline2 {
   height: 10px;
   width: 10px;
-  background-color: #efd236;
+  background-color: #1daff3;
   margin: auto;
   margin-top: -6px;
   transform: rotate(-135deg);
@@ -393,17 +393,17 @@ section:nth-of-type(2) {
   border-radius: 5px;
   text-align: center;
   line-height: 50px;
-  border: 1px solid #efd236;
+  border: 1px solid #1daff3;
   transition: 0.4s;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
-  background-color: #efd236;
+  background-color: #1daff3;
 }
 .love-details:hover .love-icon {
   background-color: white;
-  color: #efd236;
+  color: #1daff3;
 }
 
 .profil {
@@ -424,6 +424,7 @@ section:nth-of-type(2) {
 }
 .profil-image {
   margin: 0px 16px;
+  filter: drop-shadow(0px 0px 35px #141414);
 }
 .profil-img {
   width: 100%;
@@ -507,8 +508,8 @@ section:nth-of-type(2) {
 .about-link-1:hover {
   text-decoration: none;
   color: black;
-  background-color: #efd236;
-  border: 1px solid #efd236;
+  background-color: #1daff3;
+  border: 1px solid #1daff3;
 }
 .about-link-2 {
   font-size: 16px;
@@ -529,8 +530,8 @@ section:nth-of-type(2) {
 .about-link-2:hover {
   text-decoration: none;
   color: black;
-  background-color: #efd236;
-  border: 1px solid #efd236;
+  background-color: #1daff3;
+  border: 1px solid #1daff3;
 }
 .about-link-3 {
   font-size: 16px;
@@ -550,6 +551,28 @@ section:nth-of-type(2) {
   box-shadow: 5px 5px 27px 0px #cecece;
 }
 .about-link-3:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #efd236;
+  border: 1px solid #efd236;
+}
+.about-link-4 {
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  padding: 13px 18px;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  border: 1px solid white;
+  margin-right: 20px;
+  box-shadow: 5px 5px 27px 0px #cecece;
+}
+.about-link-4:hover {
   text-decoration: none;
   color: black;
   background-color: #efd236;
@@ -926,13 +949,13 @@ section:nth-of-type(2) {
   border-radius: 5px;
   text-align: center;
   line-height: 50px;
-  border: 1px solid #efd236;
+  border: 1px solid #1daff3;
   transition: 0.4s;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
-  background-color: #efd236;
+  background-color: #1daff3;
   position: relative;
 }
 .main-row {
@@ -1054,13 +1077,13 @@ section:nth-of-type(2) {
   border-radius: 5px;
   text-align: center;
   line-height: 50px;
-  border: 1px solid #efd236;
+  border: 1px solid #1daff3;
   transition: 0.4s;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
-  background-color: #efd236;
+  background-color: #1daff3;
   position: relative;
 }
 
@@ -1830,13 +1853,13 @@ section:nth-of-type(2) {
   border-radius: 5px;
   text-align: center;
   line-height: 50px;
-  border: 1px solid #efd236;
+  border: 1px solid #1daff3;
   transition: 0.4s;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
-  background-color: #efd236;
+  background-color: #1daff3;
 }
 
 .testimonial {
@@ -1951,7 +1974,7 @@ blockquote {
   bottom: -32px;
 }
 #fade-quote-carousel.carousel .carousel-indicators > li {
-  background-color: #efd236;
+  background-color: #1daff3;
   border: none;
 }
 .fa-4x {
@@ -1959,7 +1982,7 @@ blockquote {
   color: white;
   height: 50px;
   width: 50px;
-  background-color: #efd236;
+  background-color: #1daff3;
   line-height: 51px;
   border-radius: 5px;
 }
@@ -1972,7 +1995,7 @@ blockquote {
   margin: 0px;
   margin-top: 30px;
   font-size: 29px;
-  color: #efd236;
+  color: #1daff3;
 }
 .tag ul {
   padding-left: 0px;
@@ -1989,7 +2012,7 @@ blockquote {
 .tag ul li a {
   font-size: 16px;
   color: black;
-  background-color: #efd236;
+  background-color: #1daff3;
   padding: 5px 10px;
   transition: 0.4s;
   -webkit-transition: 0.4s;
@@ -2024,8 +2047,8 @@ blockquote {
 .pagination ul li a {
   font-size: 16px;
   color: black;
-  background-color: #efd236;
-  border: 1px solid #efd236;
+  background-color: #1daff3;
+  border: 1px solid #1daff3;
   padding: 5px 10px;
   transition: 0.4s;
   -webkit-transition: 0.4s;
@@ -2035,7 +2058,7 @@ blockquote {
 }
 
 .pagination ul li a:hover {
-  color: #efd236;
+  color: #1daff3;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2091,7 +2114,7 @@ blockquote {
   color: black;
 }
 .blog-icon {
-  color: #efd236;
+  color: #1daff3;
 }
 .blog-bottom {
   margin-top: 15px;
@@ -2214,26 +2237,26 @@ blockquote {
   width: 100%;
 }
 .btn-success.disabled {
-  background-color: #efd236;
-  border-color: #efd236;
+  background-color: #1daff3;
+  border-color: #1daff3;
   color: black;
   cursor: not-allowed;
 }
 .btn.disabled:hover {
-  background-color: #efd236;
-  border-color: #efd236;
+  background-color: #1daff3;
+  border-color: #1daff3;
   color: black;
   cursor: not-allowed;
 }
 .btn-success:hover {
   cursor: pointer;
-  background-color: #efd236;
-  border-color: #efd236;
+  background-color: #1daff3;
+  border-color: #1daff3;
   color: black;
 }
 .btn-success {
-  background-color: #efd236;
-  border-color: #efd236;
+  background-color: #1daff3;
+  border-color: #1daff3;
   color: black;
 }
 .text-danger {
@@ -2259,7 +2282,7 @@ blockquote {
 
 .contact-icon {
   font-size: 43px;
-  color: #efd236;
+  color: #1daff3;
   position: relative;
   margin-left: 0px;
   margin-top: 0px;
@@ -2276,7 +2299,7 @@ blockquote {
   position: relative;
   margin-top: 14px;
   font-weight: 700;
-  color: #efd236;
+  color: #1daff3;
 }
 .contact-col-info p {
   font-size: 17px;
@@ -2286,7 +2309,7 @@ blockquote {
   margin-bottom: 0px;
 }
 .copyright-details {
-  background-color: #efd236;
+  background-color: #1daff3;
   padding-top: 27px;
 }
 .copyright h3 {
@@ -2647,6 +2670,22 @@ blockquote {
     -ms-transition: 0.4s;
     border: 1px solid white;
     margin-left: 20px;
+    margin-right: 10px;
+    box-shadow: 5px 5px 27px 0px #cecece;
+  }
+  .about-link-4 {
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    padding: 13px 9px;
+    position: relative;
+    border-radius: 5px;
+    transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    border: 1px solid white;
     margin-right: 10px;
     box-shadow: 5px 5px 27px 0px #cecece;
   }

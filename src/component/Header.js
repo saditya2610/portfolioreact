@@ -53,7 +53,7 @@ function Header() {
                         <a href="/#resume">Pendidikan</a>
                       </li>
                       <li>
-                        <a href="/#blog">Blog</a>
+                        <a href="/#project">Project</a>
                       </li>
                       <li>
                         <a href="/#contact">Kontak</a>

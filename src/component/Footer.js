@@ -42,7 +42,7 @@ function Footer() {
           </ul>
         </div>
         <div className="copyright">
-          <h3>&copy; {currYear}, Made with 🐱‍🏍 by Sadit Aditya.</h3>
+          <h3>&copy; {currYear}, Made with 🐱‍🏍 by Surya Aditya.</h3>
         </div>
         <a
           href="//www.dmca.com/Protection/Status.aspx?ID=4ce89e88-486f-4e19-9159-e412a842118e"
