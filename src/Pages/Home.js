@@ -94,15 +94,8 @@ const Home = () => {
                       <div className="underline1"></div>
                       <div className="underline2"></div>
                       <p>
-                        At present time I'm working on a multi-role, as a Web
-                        Developer I design and create various websites. And as
-                        UI/UX Designer I create many designs for Web
-                        Applications and Mobile applications. I create the
-                        beauty of the site. I'm responsible for the site's
-                        technical aspects, such as its performance and capacity,
-                        which are measures of a website's speed and how much
-                        traffic the site can handle. In addition, I also create
-                        content for the site.
+                      Saat ini saya sedang mengerjakan multi-peran, sebagai Pengembang Web saya mendesain dan membuat berbagai situs web. Dan sebagai Desainer UI/UX, 
+                      saya membuat banyak desain untuk Aplikasi Web dan aplikasi Seluler. Saya menciptakan keindahan situs. Saya bertanggung jawab atas aspek teknis situs, seperti kinerja dan kapasitasnya, yang merupakan ukuran kecepatan situs web dan jumlah lalu lintas yang dapat ditangani situs. Selain itu, saya juga membuat konten untuk situs tersebut.
                       </p>
                     </div>
                   </div>
@@ -129,7 +122,7 @@ const Home = () => {
                       <h3>UI/UX Design</h3>
                       <div className="underline1"></div>
                       <div className="underline2"></div>
-                      <p>Love to do UI/UX design for new product</p>
+                      <p>Senang melakukan desain UI/UX untuk produk baru</p>
                     </div>
                   </div>
                   <div className="col-md-3 col-sm-6">
@@ -150,7 +143,7 @@ const Home = () => {
                       <h3>Web Development</h3>
                       <div className="underline1"></div>
                       <div className="underline2"></div>
-                      <p>Created all types of modern web development.</p>
+                      <p>Membuat semua jenis pengembangan web modern.</p>
                     </div>
                   </div>
                 </div>
@@ -203,9 +196,8 @@ const Home = () => {
                         Hire Me
                       </a>
                       <a className="about-link-3" href="assets/cv/Portfolio Surya Aditya GD.pdf">
-                       Short Portfolio
+                       Portfolio
                       </a>
-                     
                       </div>
                     </div>
                   </div>
@@ -1064,7 +1056,7 @@ const Home = () => {
                     <div className="col-md-4 col-sm-6">
                       <div className="blog-main">
                         <a
-                          href="https://saditaditya.wordpress.com/"
+                          href="https://saditya2610.github.io/tokogame.github.io/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -1095,6 +1087,49 @@ const Home = () => {
                           </p>
                           <a
                             href="https://saditya2610.github.io/tokogame.github.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="about-link-2"
+                          >
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-md-4 col-sm-6">
+                      <div className="blog-main">
+                        <a
+                          href="https://github.com/saditya2610/sispol"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="https://user-images.githubusercontent.com/75921130/255107656-43a43b3f-e553-4d25-a15d-b0d24f35d461.png"
+                            alt="sispol"
+                            className="blog-img"
+                          />
+                        </a>
+                        <div className="blog-head">
+                          <a
+                            href="https://github.com/saditya2610/sispol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <h3>
+                              <strong>
+                              SISPOL(Sistem Polling)
+                              </strong>
+                            </h3>
+                          </a>
+                        </div>
+                        <div className="blog-bottom">
+                          <p>
+                          Sistem Polling Dinas Perhubungan Provinsi
+                          </p>
+                          <a
+                            href="https://github.com/saditya2610/sispol"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="about-link-2"
