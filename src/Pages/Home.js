@@ -1139,6 +1139,49 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
+                    <div className="col-md-4 col-sm-6">
+                      <div className="blog-main">
+                        <a
+                          href="https://saditya2610.github.io/kalkulator/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="https://user-images.githubusercontent.com/75921130/257041505-fd8ca9ac-5738-4220-8f85-baa2771099fa.png"
+                            alt="kalkulator"
+                            className="blog-img"
+                          />
+                        </a>
+                        <div className="blog-head">
+                          <a
+                            href="https://saditya2610.github.io/kalkulator/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <h3>
+                              <strong>
+                              Kalkulator Sederhana JS
+                              </strong>
+                            </h3>
+                          </a>
+                        </div>
+                        <div className="blog-bottom">
+                          <p>
+                          Kalkulator sederhana React JS
+                          <br/>
+                          </p>
+                          <a
+                            href="https://saditya2610.github.io/kalkulator/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="about-link-2"
+                          >
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                     <div className="row" style={{ textAlign: "center" }}>
                       <a
                         href="#"
@@ -1359,24 +1402,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                 {/* <div class="container-fluid map-col">
-                  <div class="col-md-12 col-sm-12 map-col">
-                    <div class="google-maps">
-                      <div class="map-wrap">
-                        <iframe
-                          title="google-maps"
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471220.5630603985!2d88.0495328251319!3d22.675752087592436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1653845709428!5m2!1sen!2sin"
-                          width="100%"
-                          height="450"
-                          style={{ border: "0" }}
-                          allowfullscreen=""
-                          loading="lazy"
-                          referrerpolicy="no-referrer-when-downgrade"
-                        ></iframe>
-                        </div>  
-                    </div>
-                  </div>
-                </div>*/}
+                
               </div>
             </div>
           </div>

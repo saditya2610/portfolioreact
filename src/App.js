@@ -4,6 +4,7 @@ import "./App.css";
 // import Router
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
 // import Component
 import Header from "./component/Header";
 import Footer from "./component/Footer";
@@ -14,6 +15,7 @@ import Home from "./Pages/Home";
 import ReactHooks from "./Pages/ReactHooks";
 import UiUx from "./Pages/UiUx";
 import FormExample from "./Pages/FormExample";
+
 
 function App() {
   return (
