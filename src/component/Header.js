@@ -57,9 +57,6 @@ function Header() {
                       <li>
                         <a href="/#contact">Kontak</a>
                         </li>
-                      <li>
-                      <a href="https://drive.google.com/drive/folders/1lmTH3CmnVGQXgckZc4QEr9ap5XWwdA1w?usp=sharing">Sertifikat</a>
-                      </li>
                     </ul>
                   </div>
                 </div>
