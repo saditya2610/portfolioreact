@@ -530,6 +530,36 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="row love-row">
+                  <div className="col-md-6 col-sm-12">
+                    <div className="exp-details" data-wow-delay=".2s">
+                      <div className="exp-hover"></div>
+                      <div className="exp-main">
+                        <i
+                          className="fa fa-building exp-icon"
+                          aria-hidden="true"
+                        ></i>
+                        <h3>
+                          <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: "#4d4d4d" }}
+                          >
+                            KONI Provinsi Riau
+                          </a>
+                        </h3>
+                        <h4> Application Implementor,IT</h4>
+                        <h2>2023-Present</h2>
+                        <div className="underline1"></div>
+                        <div className="underline2"></div>
+                        <p>
+                        I work in KONI Riau Province as a Application Implementor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
                   {/* <div className="col-md-4 col-sm-4">
                     <div className="exp-details" data-wow-delay=".4s">
                       <div className="exp-hover"></div>
