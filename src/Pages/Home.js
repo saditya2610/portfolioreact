@@ -358,7 +358,7 @@ const Home = () => {
                         <p>
                           Completed my school life from SMAN 4 Pekanbaru
                         </p>
-                      </div>
+                      </div> 
                     </div>
                   </div>
                   <div className="col-md-4 col-sm-4">
@@ -549,7 +549,7 @@ const Home = () => {
                             KONI Provinsi Riau
                           </a>
                         </h3>
-                        <h4> Application Implementor,IT</h4>
+                        <h4> Application Implementor,IT (contract)</h4>
                         <h2>2023-Present</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
@@ -1432,7 +1432,6 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
