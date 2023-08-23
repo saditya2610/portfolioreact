@@ -389,7 +389,7 @@ const Home = () => {
                       <div className="resume-main">
                         <i className="fa fa-graduation-cap resume-icon" aria-hidden="true"></i>
                         <h3>Training &amp; Skill</h3>
-                        <h2>2022-2022</h2>
+                        <h2>Mei 2022 - Jun 2022</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
@@ -413,7 +413,7 @@ const Home = () => {
                       <div className="resume-main">
                         <i className="fa fa-graduation-cap resume-icon" aria-hidden="true"></i>
                         <h3>Training &amp; Skill</h3>
-                        <h2>2022-2022</h2>
+                        <h2>Sep 2022 - Okt 2022</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
@@ -462,7 +462,7 @@ const Home = () => {
                           </a>
                         </h3>
                         <h4> Content Creator</h4>
-                        <h2>2017-Present</h2>
+                        <h2>Jun 2017-Present</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
@@ -491,7 +491,7 @@ const Home = () => {
                           </a>
                         </h3>
                         <h4> Application Implementor,IT (contract)</h4>
-                        <h2>2023-Present</h2>
+                        <h2>Aug 2023 - Present</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
@@ -521,7 +521,7 @@ const Home = () => {
                           </a>
                         </h3>
                         <h4> Publication Service,Programmer</h4>
-                        <h2>2022-2022</h2>
+                        <h2>Feb 2022 - Mar 2022</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
@@ -549,7 +549,7 @@ const Home = () => {
                           </a>
                         </h3>
                         <h4>React JS Web Development Digitalent Scholarship (FGA) </h4>
-                        <h2>2022-2022</h2>
+                        <h2>Mei 2022 - Jun 2022</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
