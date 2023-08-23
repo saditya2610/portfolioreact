@@ -224,8 +224,7 @@ const Home = () => {
                       <div className="work-statistics">
                         <i
                           className="fa fa-crop stat-icon"
-                          aria-hidden="true"
-                        ></i>
+                          aria-hidden="true"></i>
                         <h3 className="Count">0040</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
@@ -236,8 +235,7 @@ const Home = () => {
                       <div className="work-statistics">
                         <i
                           className="fa fa-bolt stat-icon"
-                          aria-hidden="true"
-                        ></i>
+                          aria-hidden="true"></i>
                         <h3 className="Count">0004</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
@@ -297,7 +295,7 @@ const Home = () => {
                   <div className="skill-details">
                     <div className="content">
                       <div className="col">
-                        <ul id="skill-main">
+                        <ul id="skill-main" >
                           <li>
                             <h3>HTML / CSS - 97%</h3>
                           </li>
@@ -308,7 +306,7 @@ const Home = () => {
                             <h3>React JS - 90%</h3>
                           </li>
                           <li>
-                            <h3>PHP (Laravel) - 80%</h3>
+                            <h3>PHP (Laravel 9) - 80%</h3>
                           </li>
                           <li>
                             <h3>MySQL - 95%</h3>
@@ -336,8 +334,8 @@ const Home = () => {
                       <div className="underline1"></div>
                       <div className="underline2"></div>
                       <p>
-                        I like to code things from scratch, and enjoy bringing
-                        ideas to life in the browser.
+                      Saya suka membuat kode dari awal, 
+                      dan senang mewujudkan ide di browser.
                       </p>
                     </div>
                   </div>
@@ -395,7 +393,7 @@ const Home = () => {
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          Currently learning Frontend Web Development from{" "}
+                          Currently Learning Frontend Web Development from{" "}
                           <a
                             href="https://digitalent.kominfo.go.id/akademi/FGA"
                             target="_blank"
@@ -403,7 +401,7 @@ const Home = () => {
                           >
                             Digitalent Scholarship From Kominfo (FGA)
                           </a>
-                          , Indonesia.
+                          ,Indonesia.
                         </p>
                       </div>
                     </div>
@@ -439,7 +437,7 @@ const Home = () => {
                       <div className="underline1"></div>
                       <div className="underline2"></div>
                       <p>
-                      mendefinisikan diri saya dengan pekerjaan yang ingin saya lakukan.
+                      Mendefinisikan diri Saya dengan pekerjaan yang ingin saya lakukan.
                       </p>
                     </div>
                   </div>
@@ -472,6 +470,36 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
+                  </div>
+                  <div className="row love-row">
+                  <div className="col-md-6 col-sm-12">
+                    <div className="exp-details" data-wow-delay=".2s">
+                      <div className="exp-hover"></div>
+                      <div className="exp-main">
+                        <i
+                          className="fa fa-building exp-icon"
+                          aria-hidden="true"
+                        ></i>
+                        <h3>
+                          <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: "#4d4d4d" }}
+                          >
+                            KONI Provinsi Riau
+                          </a>
+                        </h3>
+                        <h4> Application Implementor,IT (contract)</h4>
+                        <h2>2023-Present</h2>
+                        <div className="underline1"></div>
+                        <div className="underline2"></div>
+                        <p>
+                        I Work in KONI Riau Province as A Application Implementor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                   </div>
                   <div className="row love-row">
                   <div className="col-md-6 col-sm-12">
@@ -530,36 +558,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="row love-row">
-                  <div className="col-md-6 col-sm-12">
-                    <div className="exp-details" data-wow-delay=".2s">
-                      <div className="exp-hover"></div>
-                      <div className="exp-main">
-                        <i
-                          className="fa fa-building exp-icon"
-                          aria-hidden="true"
-                        ></i>
-                        <h3>
-                          <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: "#4d4d4d" }}
-                          >
-                            KONI Provinsi Riau
-                          </a>
-                        </h3>
-                        <h4> Application Implementor,IT (contract)</h4>
-                        <h2>2023-Present</h2>
-                        <div className="underline1"></div>
-                        <div className="underline2"></div>
-                        <p>
-                        I work in KONI Riau Province as a Application Implementor
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
+                  
                   {/* <div className="col-md-4 col-sm-4">
                     <div className="exp-details" data-wow-delay=".4s">
                       <div className="exp-hover"></div>
