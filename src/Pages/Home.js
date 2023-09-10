@@ -134,7 +134,7 @@ const Home = () => {
                       <h3>Web Design</h3>
                       <div className="underline1"></div>
                       <div className="underline2"></div>
-                      <p>Passionate about Web Design from start</p>
+                      <p>memiliki Passion Design web sejak awal</p>
                     </div>
                   </div>
                   <div className="col-md-3 col-sm-6">
@@ -225,7 +225,7 @@ const Home = () => {
                         <i
                           className="fa fa-crop stat-icon"
                           aria-hidden="true"></i>
-                        <h3 className="Count">0040</h3>
+                        <h3 className="Count">0010</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>Graphic Design</p>
@@ -248,7 +248,7 @@ const Home = () => {
                           className="fa fa-coffee stat-icon"
                           aria-hidden="true"
                         ></i>
-                        <h3 className="Count">0085</h3>
+                        <h3 className="Count">0025</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>Cups Coffee Taken</p>
@@ -286,7 +286,7 @@ const Home = () => {
                     UI/UX melibatkan perencanaan dan pengulangan struktur dan tata letak situs. Setelah arsitektur informasi yang tepat tersedia, saya mendesain lapisan visual untuk menciptakan keindahan 
                     pengalaman pengguna. Front End Development sedang membangun komponen visual dari sebuah situs web. Menggunakan HTML, CSS, dan
                     Javascript, saya membuat situs web yang cepat dan interaktif. Ini juga 
-                    mungkin termasuk CMS, apis, atau integrasi lainnya. Pekerjaan yang paling saya minati adalah pekerjaan 0-1 
+                    mungkin termasuk CMS, APIS, atau integrasi lainnya. Pekerjaan yang paling saya minati adalah pekerjaan 0-1 
                     (membantu Anda mendapatkan ide Anda).
                     </p>
                   </div>
