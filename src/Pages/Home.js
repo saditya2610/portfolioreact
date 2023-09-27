@@ -258,7 +258,7 @@ const Home = () => {
                           className="fa fa-coffee stat-icon"
                           aria-hidden="true"
                         ></i>
-                        <h3 className="Count">0085</h3>
+                        <h3 className="Count">0025</h3>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>Cups Coffee Taken</p>
@@ -476,7 +476,7 @@ const Home = () => {
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
-                          As IT support and Implementor Application/System Website
+                          As IT support and Implementor Application/System Website Monitor Sports
                         </p>
                       </div>
                     </div>
