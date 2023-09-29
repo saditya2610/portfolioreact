@@ -129,7 +129,7 @@ const Home = () => {
                       <h3>UI/UX Design</h3>
                       <div className="underline1"></div>
                       <div className="underline2"></div>
-                      <p>Love to do UI/UX design for new product</p>
+                      <p>Senang Melakukan Design UI UX untuk melakukan sebuah Produk(web design)</p>
                     </div>
                   </div>
                   <div className="col-md-3 col-sm-6">
@@ -141,7 +141,7 @@ const Home = () => {
                       <h3>Web Design</h3>
                       <div className="underline1"></div>
                       <div className="underline2"></div>
-                      <p>Passionate about Web Design from start</p>
+                      <p>Menggunakan Figma dan Adobe Photoshop 2020</p>
                     </div>
                   </div>
                   <div className="col-md-3 col-sm-6">
@@ -150,7 +150,7 @@ const Home = () => {
                       <h3>Web Development</h3>
                       <div className="underline1"></div>
                       <div className="underline2"></div>
-                      <p>Created all types of modern web development.</p>
+                      <p>Membuat Berdasarkan Keinginan Jenis Web Yang dibutuhkan.</p>
                     </div>
                   </div>
                 </div>
