@@ -194,7 +194,7 @@ const Home = () => {
                       </p>
                       <a
                         className="about-link-1"
-                        href="assets/cv/CV Surya Aditya GD Informatic Engineering.pdf"
+                        href="assets/cv/Surya Aditya GD CV Update.pdf"
                         target="_blank"
                       >
                         See My CV
@@ -1033,7 +1033,7 @@ const Home = () => {
                         </div>
                         <div className="blog-bottom">
                           <p>
-                            Sistem polling Untuk Melakukan Penilaian dari Perusahaan yang
+                            Sistem polling Untuk Melakukan Penilaian dari Berbagai Perusahaan yang
                             bekerja sama dengan Dishub Provinsi Riau.
                           </p>
                           <a
