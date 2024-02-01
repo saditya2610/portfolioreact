@@ -194,7 +194,7 @@ const Home = () => {
                       </p>
                       <a
                         className="about-link-1"
-                        href="assets/cv/Surya Aditya GD CV Update.pdf"
+                        href="assets/cv/Surya Aditya GD CV Update 2024.pdf"
                         target="_blank"
                       >
                         See My CV
@@ -452,6 +452,33 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
+                {/* Experience */}
+                
+                <div className="row love-row">
+  <div className="col-md-6 col-sm-12 position-relative"> 
+    <div className="exp-details" data-wow-delay=".2s">
+      <div className="exp-hover"></div>
+      <div className="exp-main">
+        <i className="fa fa-building exp-icon" aria-hidden="true"></i>
+        <h3>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#4d4d4d" }}
+          >
+            Universitas Abdurrab Pekanbaru
+          </a>
+        </h3>
+        <h4>IT,Programmer (Full Time)</h4>
+        <h2>Jan 2024 - Present</h2>
+        <div className="underline1"></div>
+        <div className="underline2"></div>
+        <p>As Mobile Flutter Developer Programmer</p>
+      </div>
+    </div>
+  </div>
+</div>
                 <div className="row love-row">
                   <div className="col-md-6 col-sm-12">
                     <div className="exp-details" data-wow-delay=".2s">
@@ -472,7 +499,7 @@ const Home = () => {
                           </a>
                         </h3>
                         <h4>IT,Application Implementor (Contract)</h4>
-                        <h2>Aug 2023 - Present</h2>
+                        <h2>Aug 2023 - Dec 2023</h2>
                         <div className="underline1"></div>
                         <div className="underline2"></div>
                         <p>
@@ -542,6 +569,7 @@ const Home = () => {
                     </div>
                   </div>
                   </div>
+                              
                   <div className="col-md-6 col-sm-12">
                     <div className="exp-details" data-wow-delay=".3s">
                       <div className="exp-hover"></div>
