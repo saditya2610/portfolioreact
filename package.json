@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://sanajitjana.github.io",
   "dependencies": {
+    "@pnp/graph": "^3.22.0",
+    "@pnp/sp": "^3.22.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
