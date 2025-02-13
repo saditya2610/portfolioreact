@@ -164,7 +164,7 @@ const Home = () => {
                   <div className="col-md-4 col-sm-6 col-xs-12 about-col">
                     <div className="profil-image">
                       <img
-                        src="assets/img/fotosurya.png"
+                        src="assets/img/surya.png"
                         alt="saditaditya"
                         className="profil-img wow fadeIn"
                       />
@@ -190,7 +190,7 @@ const Home = () => {
                         I design and build digital products with simple and
                         beautiful code. I specialize in custom web theme
                         development and love what I do.
-                        <br />
+                        <br /> 
                       </p>
                       <a
                         className="about-link-1"
@@ -449,6 +449,36 @@ const Home = () => {
                       <p>
                       mendefinisikan diri saya dengan pekerjaan yang ingin saya lakukan.
                       </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row love-row">
+                  <div className="col-md-6 col-sm-12">
+                    <div className="exp-details" data-wow-delay=".2s">
+                      <div className="exp-hover"></div>
+                      <div className="exp-main">
+                        <i
+                          className="fa fa-building exp-icon"
+                          aria-hidden="true"
+                        ></i>
+                        <h3>
+                          <a
+                            href="https://www.youtube.com/@SaditAditya/videos"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: "#4d4d4d" }}
+                          >
+                            Universitas Abdurrab (Pekanbaru)
+                          </a>
+                        </h3>
+                        <h4>IT, Programmer (Full Time)</h4>
+                        <h2>Jan 2024 - Present</h2>
+                        <div className="underline1"></div>
+                        <div className="underline2"></div>
+                        <p>
+                          As a Mobile Flutter Developer at AITC(Academic Information Technology Center)
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

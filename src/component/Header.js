@@ -56,7 +56,7 @@ function Header() {
                         <a href="/#project">Project</a>
                       </li>
                       <li>
-                        <a href="https://drive.google.com/drive/folders/1lmTH3CmnVGQXgckZc4QEr9ap5XWwdA1w?usp=drive_link">Sertfikat</a>
+                        <a href="https://drive.google.com/drive/folders/1lmTH3CmnVGQXgckZc4QEr9ap5XWwdA1w?usp=drive_link">Sertifikat</a>
                       </li>
                       <li>
                         <a href="/#contact">Kontak</a>
