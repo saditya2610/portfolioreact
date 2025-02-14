@@ -479,36 +479,7 @@ const Home = () => {
     </div>
   </div>
 </div>
-                <div className="row love-row">
-                  <div className="col-md-6 col-sm-12">
-                    <div className="exp-details" data-wow-delay=".2s">
-                      <div className="exp-hover"></div>
-                      <div className="exp-main">
-                        <i
-                          className="fa fa-building exp-icon"
-                          aria-hidden="true"
-                        ></i>
-                        <h3>
-                          <a
-                            href="https://www.youtube.com/@SaditAditya/videos"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: "#4d4d4d" }}
-                          >
-                            Universitas Abdurrab (Pekanbaru)
-                          </a>
-                        </h3>
-                        <h4>IT, Programmer (Full Time)</h4>
-                        <h2>Jan 2024 - Present</h2>
-                        <div className="underline1"></div>
-                        <div className="underline2"></div>
-                        <p>
-                          As a Mobile Flutter Developer at AITC(Academic Information Technology Center)
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
                 <div className="row love-row">
                   <div className="col-md-6 col-sm-12">
                     <div className="exp-details" data-wow-delay=".2s">
@@ -1233,7 +1204,90 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    
+                    <div className="col-md-4 col-sm-6">
+                      <div className="blog-main">
+                        <a
+                          href="https://fakultas-teknik.univrab.ac.id/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="assets/img/blog/Web_Fakul.png"
+                            alt="saditadityawordpress"
+                            className="blog-img"
+                          />
+                        </a>
+                        <div className="blog-head">
+                          <a
+                            href="https://fakultas-teknik.univrab.ac.id/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <h3>
+                              <strong>
+                              Web | Fakultas Teknik 
+                              </strong>
+                            </h3>
+                          </a>
+                        </div>
+                        <div className="blog-bottom">
+                          <p>
+                          Web CMS Fakultas Teknik Universitas Abdurrab
+                          </p>
+                          <a
+                            href="https://fakultas-teknik.univrab.ac.id/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="about-link-2"
+                          >
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-4 col-sm-6">
+                      <div className="blog-main">
+                        <a
+                          href="https://github.com/saditya2610/univrabmobile"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="assets/img/blog/mobile.png"
+                            alt="saditadityawordpress"
+                            className="blog-img"
+                          />
+                        </a>
+                        <div className="blog-head">
+                          <a
+                            href="https://github.com/saditya2610/univrabmobile"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <h3>
+                              <strong>
+                              Univrab Mobile
+                              </strong>
+                            </h3>
+                          </a>
+                        </div>
+                        <div className="blog-bottom">
+                          <p>
+                          Aplikasi Absensi Universitas Abdurrab
+                          </p>
+                          <a
+                            href="https://github.com/saditya2610/univrabmobile"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="about-link-2"
+                          >
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                     <div className="row" style={{ textAlign: "center" }}>
                       <a
                         href="#"
