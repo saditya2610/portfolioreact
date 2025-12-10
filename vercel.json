@@ -1,5 +1,8 @@
 {
-  "nodeVersion": "24.x",
-"$schema": "https://openapi.vercel.sh/vercel.json",
-  "fluid": true
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
