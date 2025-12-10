@@ -1,3 +1,5 @@
 {
-  "nodeVersion": "24.x"
+  "nodeVersion": "24.x",
+"$schema": "https://openapi.vercel.sh/vercel.json",
+  "fluid": true
 }
