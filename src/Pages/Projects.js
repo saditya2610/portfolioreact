@@ -81,6 +81,14 @@ const Projects = () => {
             image: "/assets/img/blog/univrabweb.png",
             description: "Website resmi Universitas Abdurrab yang memuat informasi kampus, fakultas, dan berita terbaru.",
             link: "https://univrab.ac.id/"
+        },
+        {
+            id: 10,
+            title: "Laporan BUMDES",
+            category: "Web App",
+            image: "/assets/img/blog/bumdeslaporan.png",
+            description: "Sistem pelaporan keuangan untuk Badan Usaha Milik Desa (BUMDES) yang membantu mengelola dan memantau laporan keuangan desa.",
+            link: "#"
         }
     ];
 
