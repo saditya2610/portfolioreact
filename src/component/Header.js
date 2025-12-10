@@ -46,22 +46,22 @@ const Header = () => {
           Projects
         </Link>
         <a
-          href="/#profile"
+          href="#profile"
           className="text-xs tracking-[0.2em] text-gray-400 hover:text-gold transition-colors uppercase font-semibold"
         >
           About
         </a>
         <a
-          href="/#contact"
+          href="#contact"
           className="text-xs tracking-[0.2em] text-gray-400 hover:text-gold transition-colors uppercase font-semibold"
         >
           Contact
         </a>
       </div>
 
-      <Link to="#" className="btn-gothic-outline text-[10px] md:text-xs font-bold animate-fade-in delay-400">
+      <button className="btn-gothic-outline text-[10px] md:text-xs font-bold animate-fade-in delay-400">
         Hire Me
-      </Link>
+      </button>
     </nav>
   );
 };
