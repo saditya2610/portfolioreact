@@ -1,63 +1,53 @@
-import React from "react";
-var d = new Date();
-var currYear = d.getFullYear();
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Footer() {
-  return (
-    <React.StrictMode>
-      <div className="copyright-details">
-        <div className="about-social-icon text-center">
-          <ul className="about-social">
-            <li className="wow fadeIn" data-wow-delay=".8s">
-              <a href="#" target="newtab">
-                <i className="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li className="wow fadeIn" data-wow-delay=".6s">
-              <a
-                href="https://www.linkedin.com/in/surya-aditya-gd-33306821b/"
-                target="newtab"
-              >
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li className="wow fadeIn" data-wow-delay=".2s">
-              <a href="#" target="newtab">
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li className="wow fadeIn" data-wow-delay=".4s">
-              <a
-                href="https://www.instagram.com/dirgantaras/"
-                target="newtab"
-              >
-                <i className="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li className="wow fadeIn" data-wow-delay="1.2s">
-              <a href="https://github.com/saditya2610" target="newtab">
-                <i className="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="copyright">
-          <h3>&copy; {currYear}, Made with 🐱‍🏍 by Surya Aditya.</h3>
-        </div>
-        <a
-          href="//www.dmca.com/Protection/Status.aspx?ID=4ce89e88-486f-4e19-9159-e412a842118e"
-          title="DMCA.com Protection Status"
-          class="dmca-badge"
-        >
-          <img
-            src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=4ce89e88-486f-4e19-9159-e412a842118e"
-            alt="DMCA.com Protection Status"
-          />
-        </a>
-        <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-      </div>
-    </React.StrictMode>
-  );
-}
+const Footer = () => {
+    return (
+        <footer className="bg-black pt-20 pb-10 border-t border-gray-900 relative">
+            <div className="container mx-auto px-6 text-center">
+                <div className="text-gold text-3xl font-bold font-heading mb-8 tracking-widest">
+                    SADIT <span className="text-white">ADITYA</span>
+                </div>
+
+                <div className="flex justify-center gap-8 mb-12">
+                    <a
+                        href="#"
+                        className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-500 hover:text-gold hover:border-gold transition-all rotate-45 group"
+                    >
+                        <i className="fab fa-github -rotate-45 group-hover:text-gold"></i>
+                    </a>
+                    <a
+                        href="#"
+                        className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-500 hover:text-gold hover:border-gold transition-all rotate-45 group"
+                    >
+                        <i className="fab fa-instagram -rotate-45 group-hover:text-gold"></i>
+                    </a>
+                    <a
+                        href="#"
+                        className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-500 hover:text-gold hover:border-gold transition-all rotate-45 group"
+                    >
+                        <i className="fab fa-linkedin -rotate-45 group-hover:text-gold"></i>
+                    </a>
+                    <a
+                        href="#"
+                        className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-500 hover:text-gold hover:border-gold transition-all rotate-45 group"
+                    >
+                        <i className="fab fa-dribbble -rotate-45 group-hover:text-gold"></i>
+                    </a>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-widest text-gray-600 mb-8">
+                    <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+                    <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                    <Link to="#" className="hover:text-white transition-colors">Contact</Link>
+                </div>
+
+                <p className="text-gray-700 text-[10px] uppercase tracking-wider">
+                    © 2025 Surya Aditya GD. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+    );
+};
 
 export default Footer;

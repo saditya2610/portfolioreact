@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./styles.css";
 
 // import Router
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -8,27 +8,30 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import ScrollToTop from "./component/ScrollToTop";
+import BackgroundMusic from "./component/BackgroundMusic";
+import { MusicProvider } from "./context/MusicContext";
 
 // import Pages
 import Home from "./Pages/Home";
-import ReactHooks from "./Pages/ReactHooks";
-import UiUx from "./Pages/UiUx";
-import FormExample from "./Pages/FormExample";
+import Projects from "./Pages/Projects";
+
 
 function App() {
   return (
     <React.StrictMode>
       <Router>
-        <Header />
-        <ScrollToTop>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/react-hooks" component={ReactHooks} />
-            <Route exact path="/ui-ux" component={UiUx} />
-            <Route exact path="/form-example" component={FormExample} />
-          </Switch>
-        </ScrollToTop>
-        <Footer />
+        <MusicProvider>
+          <BackgroundMusic />
+          <Header />
+          <ScrollToTop>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/projects" component={Projects} />
+
+            </Switch>
+          </ScrollToTop>
+          <Footer />
+        </MusicProvider>
       </Router>
     </React.StrictMode>
   );

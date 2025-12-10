@@ -1,76 +1,69 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <React.StrictMode>
-      <div className="menubar">
-        <div className="menubar-content">
-          <nav className="navbar navbar-default navbar-fixed-top">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-3 col-sm-3">
-                  <div className="site-title">
-                    <a href="/#home" style={{ textDecoration: "none" }}>
-                      <h3>Sadit Aditya</h3>
-                    </a>
-                  </div>
-                </div>
-                <div className="navbar-header">
-                  <button
-                    type="button"
-                    className="navbar-toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false"
-                  >
-                    <span className="sr-only">Toggle navigation</span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                  </button>
-                </div>
-                <div className="col-md-9 col-sm-9 navbar-style">
-                  <div
-                    className="collapse navbar-collapse"
-                    id="bs-example-navbar-collapse-1"
-                  >
-                    <ul className="nav navbar-nav">
-                      <li>
-                        <a href="/#home" className="active">
-                          Beranda
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/#about">Tentang</a>
-                      </li>
-                      <li>
-                        <a href="/#profil">Profil</a>
-                      </li>
-                      <li>
-                        <a href="/#skill">Kemampuan</a>
-                      </li>
-                      <li>
-                        <a href="/#resume">Pendidikan</a>
-                      </li>
-                      <li>
-                        <a href="/#project">Project</a>
-                      </li>
-                      <li>
-                        <a href="https://drive.google.com/drive/folders/1lmTH3CmnVGQXgckZc4QEr9ap5XWwdA1w?usp=drive_link">Sertifikat</a>
-                      </li>
-                      <li>
-                        <a href="/#contact">Kontak</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
+    <nav
+      className={`fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center transition-all duration-300 ${scrolled
+        ? 'bg-black border-b border-gray-800'
+        : 'bg-gradient-to-b from-black/90 to-transparent'
+        }`}
+      id="navbar"
+    >
+      <div className="flex items-center gap-2 animate-fade-in">
+        <div className="w-8 h-8 border border-gold rotate-45 flex items-center justify-center">
+          <div className="w-4 h-4 bg-gold/50 rotate-0"></div>
+        </div>
+        <div className="ml-4 text-white text-xl font-bold tracking-[0.2em] font-heading">
+          SADIT <span className="text-gold">ADITYA</span>
         </div>
       </div>
-    </React.StrictMode>
+
+      <div className="hidden md:flex items-center gap-10 animate-fade-in delay-200">
+        <Link
+          to="/"
+          className="text-xs tracking-[0.2em] text-white hover:text-gold transition-colors uppercase font-semibold relative group"
+        >
+          Home
+          <span className="absolute -bottom-2 left-1/2 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+        </Link>
+        <Link
+          to="/projects"
+          className="text-xs tracking-[0.2em] text-gray-400 hover:text-gold transition-colors uppercase font-semibold"
+        >
+          Projects
+        </Link>
+        <a
+          href="/#profile"
+          className="text-xs tracking-[0.2em] text-gray-400 hover:text-gold transition-colors uppercase font-semibold"
+        >
+          About
+        </a>
+        <a
+          href="/#contact"
+          className="text-xs tracking-[0.2em] text-gray-400 hover:text-gold transition-colors uppercase font-semibold"
+        >
+          Contact
+        </a>
+      </div>
+
+      <Link to="#" className="btn-gothic-outline text-[10px] md:text-xs font-bold animate-fade-in delay-400">
+        Hire Me
+      </Link>
+    </nav>
   );
-}
+};
 
 export default Header;

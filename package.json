@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://sanajitjana.github.io",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@pnp/graph": "^3.22.0",
     "@pnp/sp": "^3.22.0",
     "@testing-library/jest-dom": "^5.12.0",
