@@ -301,7 +301,7 @@ const Home = () => {
                             Explore My Work
                             <i className="fas fa-arrow-down ml-2"></i>
                         </Link>
-                        <a href="/#contact" className="btn-gothic-outline">
+                        <a href="#contact" className="btn-gothic-outline" rel="noopener noreferrer">
                             Get In Touch
                         </a>
                     </div>
