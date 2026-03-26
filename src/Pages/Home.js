@@ -175,13 +175,11 @@ const ProjectCard = React.memo(({ project, index }) => (
 ));
 
 const Home = () => {
-    const [scrollY, setScrollY] = useState(0);
     const heroBgRef = useRef(null);
     const heroContentRef = useRef(null);
     const charBgTextRef = useRef(null);
 
     // Memoized data to prevent unnecessary re-renders
-    const skillsData = useMemo(() => SKILLS_DATA, []);
     const experienceData = useMemo(() => EXPERIENCE_DATA, []);
     const educationData = useMemo(() => EDUCATION_DATA, []);
     const projectsData = useMemo(() => PROJECTS_DATA, []);
@@ -189,7 +187,6 @@ const Home = () => {
     // Optimized scroll handler with useCallback
     const handleScroll = useCallback(() => {
         const currentScrollY = window.scrollY;
-        setScrollY(currentScrollY);
 
         // Hero Parallax
         if (heroBgRef.current && currentScrollY < window.innerHeight) {
