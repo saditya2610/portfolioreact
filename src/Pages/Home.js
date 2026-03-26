@@ -504,41 +504,132 @@ const Home = () => {
                         </div>
 
                         {/* Profile Section */}
-                        <div id="profile" className="flex flex-col items-center gap-8 md:gap-12 mb-20 text-center">
-                            <div className="w-full max-w-[180px] md:max-w-[220px] lg:max-w-[260px] relative reveal">
-                                <div className="relative z-10 border border-gold/30 p-2 group mx-auto">
-                                    <div className="cartoon-image">
-                                        <img
-                                            src="/assets/img/surya.png"
-                                            className="w-full h-auto max-h-28 md:max-h-36 lg:max-h-44 object-cover rounded-lg grayscale transition-all duration-700"
-                                            alt="Profile"
-                                        />
-                                    </div>
+                        <style>{`
+                            .profile-container {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 2.5rem;
+                                margin-bottom: 5rem;
+                                text-align: center;
+                                padding: 0 1.5rem;
+                                margin-top: 3rem;
+                            }
+                            @media (min-width: 768px) {
+                                .profile-container {
+                                    gap: 3.5rem;
+                                    padding: 0;
+                                }
+                            }
+                            .profile-img-wrapper {
+                                width: 220px;
+                                margin: 0 auto;
+                                display: block;
+                                position: relative;
+                                z-index: 10;
+                            }
+                            .profile-img-inner {
+                                position: relative;
+                                width: 100%;
+                                border: 2px solid #c6a665;
+                                border-radius: 1.5rem;
+                                padding: 8px;
+                                z-index: 10;
+                                background: linear-gradient(145deg, #111, #050505);
+                                box-shadow: 0 10px 30px -5px rgba(198, 166, 101, 0.3);
+                                transition: all 0.5s ease;
+                                animation: floatProfile 6s ease-in-out infinite;
+                            }
+                            @keyframes floatProfile {
+                                0%, 100% { transform: translateY(0); box-shadow: 0 10px 30px -5px rgba(198, 166, 101, 0.3); }
+                                50% { transform: translateY(-10px); box-shadow: 0 20px 40px -5px rgba(198, 166, 101, 0.5); }
+                            }
+                            .profile-img-inner:hover {
+                                border-color: #ebd6a4;
+                                box-shadow: 0 15px 50px -5px rgba(198, 166, 101, 0.8);
+                                transform: translateY(-10px) scale(1.02);
+                                animation-play-state: paused;
+                            }
+                            .profile-img-inner img {
+                                width: 100%;
+                                height: auto;
+                                display: block;
+                                border-radius: 1rem;
+                                transition: all 0.7s ease;
+                                filter: grayscale(15%) contrast(110%);
+                            }
+                            .profile-img-inner:hover img {
+                                filter: grayscale(0%) contrast(100%);
+                            }
+                            .profile-text-wrapper {
+                                width: 100%;
+                                max-width: 800px;
+                                margin: 0 auto;
+                            }
+                            .profile-greeting {
+                                font-size: 1.8rem;
+                                color: white;
+                                margin-bottom: 0.5rem;
+                                font-family: 'Cinzel', serif;
+                            }
+                            @media (min-width: 768px) {
+                                .profile-greeting { font-size: 2.5rem; }
+                            }
+                            @media (min-width: 1024px) {
+                                .profile-greeting { font-size: 3rem; }
+                            }
+                            .profile-buttons {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 1rem;
+                                margin-top: 2.5rem;
+                            }
+                            .profile-buttons a {
+                                width: 100%;
+                            }
+                            @media (min-width: 640px) {
+                                .profile-buttons {
+                                    flex-direction: row;
+                                }
+                                .profile-buttons a {
+                                    width: auto;
+                                }
+                            }
+                        `}</style>
+                        <div id="profile" className="profile-container reveal">
+                            <div className="profile-img-wrapper reveal" style={{ transitionDelay: '100ms' }}>
+                                <div className="profile-img-inner">
+                                    <img
+                                        src="/assets/img/surya.png"
+                                        alt="Profil Surya Aditya"
+                                    />
                                 </div>
-                                <div className="absolute top-2 md:top-4 left-2 md:left-4 w-full h-full border border-gray-800 -z-0 rounded-lg"></div>
                             </div>
 
-                            <div className="w-full max-w-2xl reveal" style={{ transitionDelay: '200ms' }}>
-                                <h3 className="text-2xl md:text-3xl lg:text-4xl text-white mb-2 font-heading">Hello! My Name's Surya Aditya</h3>
-                                <h4 className="text-gold text-xs md:text-sm tracking-[0.2em] uppercase mb-4 md:mb-6">also known as Sadit Aditya</h4>
+                            <div className="profile-text-wrapper reveal" style={{ transitionDelay: '300ms' }}>
+                                <h3 className="profile-greeting">Hello! My Name is Surya Aditya</h3>
+                                <h4 style={{ color: '#c6a665', fontSize: '0.875rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1.5rem', fontWeight: 'bold' }}>also known as Sadit Aditya</h4>
 
-                                <p className="text-gray-400 leading-relaxed text-sm md:text-base font-light mb-6 md:mb-8 px-4 md:px-0">
-                                    I am a Frontend Developer or Web Developer From Pekanbaru, Riau, Indonesia. I enjoy
-                                    building everything from small business sites to rich interactive web apps. if you are a
-                                    business seeking a web presence or an employer looking to hire, you can get in touch with me
-                                    <a className="text-gold underline ml-2" href="https://wa.me/6289643119126">here.</a>
-                                    I design and build digital products with simple and beautiful code. I specialize in custom
-                                    web theme development and love what I do.
+                                <p style={{ color: '#9ca3af', lineHeight: '1.8', fontWeight: '300', marginBottom: '2rem', fontSize: '1rem' }}>
+                                    I am a <span style={{ color: '#e5e7eb', fontWeight: '500' }}>Frontend Developer</span> & <span style={{ color: '#e5e7eb', fontWeight: '500' }}>Web Designer</span> from Pekanbaru, Riau, Indonesia. I enjoy
+                                    building everything from small business websites to rich, interactive web applications. 
+                                    If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me
+                                    <a style={{ color: '#c6a665', textDecoration: 'underline', marginLeft: '0.5rem', fontWeight: '500' }} href="https://wa.me/6289643119126">here.</a>
+                                    <br/><br/>
+                                    I design and build digital products with simple, beautiful code. I specialize in custom
+                                    web theme development and truly love what I do.
                                 </p>
 
-                                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
-                                    <a href="/assets/cv/Surya Aditya GD CV Update 2024.pdf" target="_blank" className="btn-gothic-outline text-center w-full sm:w-auto">
+                                <div className="profile-buttons">
+                                    <a href="/assets/cv/Surya Aditya GD CV Update 2024.pdf" target="_blank" rel="noreferrer" className="btn-gothic-outline text-center">
                                         See My CV
                                     </a>
-                                    <a href="https://wa.me/6289643119126" className="btn-gothic-fill text-center w-full sm:w-auto">
+                                    <a href="https://wa.me/6289643119126" target="_blank" rel="noreferrer" className="btn-gothic-fill text-center">
                                         Hire Me
                                     </a>
-                                    <a href="/assets/cv/Portfolio Surya Aditya GD.pdf" target="_blank" className="btn-gothic-outline text-center w-full sm:w-auto">
+                                    <a href="/assets/cv/Portfolio Surya Aditya GD.pdf" target="_blank" rel="noreferrer" className="btn-gothic-outline text-center">
                                         Short Portfolio
                                     </a>
                                 </div>

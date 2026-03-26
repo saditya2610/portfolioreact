@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,54 +16,90 @@ const Header = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center transition-all duration-300 ${scrolled
-        ? 'bg-black border-b border-gray-800'
-        : 'bg-gradient-to-b from-black/90 to-transparent'
-        }`}
-      id="navbar"
-    >
-      <div className="flex items-center gap-2 animate-fade-in">
-        <div className="w-8 h-8 border border-gold rotate-45 flex items-center justify-center">
-          <div className="w-4 h-4 bg-gold/50 rotate-0"></div>
-        </div>
-        <div className="ml-4 text-white text-xl font-bold tracking-[0.2em] font-heading">
-          SADIT <span className="text-gold">ADITYA</span>
-        </div>
-      </div>
+    <>
+      <style>{`
+        .desktop-only { display: none; }
+        .mobile-only { display: flex; }
+        .mobile-menu-container {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: rgba(5, 5, 5, 0.98);
+          border-bottom: 1px solid rgba(198, 166, 101, 0.2);
+          transition: all 0.3s ease;
+          overflow: hidden;
+        }
+        .mobile-menu-open { max-height: 300px; padding: 1.5rem 0; opacity: 1; }
+        .mobile-menu-closed { max-height: 0; padding: 0; opacity: 0; }
+        
+        .desktop-nav-link {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .desktop-nav-link:hover { color: #c6a665; }
+        
+        @media (min-width: 768px) {
+          .desktop-only { display: flex; }
+          .mobile-only { display: none; }
+          .mobile-menu-container { display: none !important; }
+        }
+      `}</style>
+      <nav
+        className="fixed top-0 w-full z-50 transition-all duration-300"
+        style={{
+            padding: '1.25rem 1.5rem',
+            backgroundColor: scrolled ? '#050505' : 'rgba(5, 5, 5, 0.8)',
+            borderBottom: scrolled ? '1px solid rgba(198, 166, 101, 0.2)' : '1px solid transparent',
+            backdropFilter: 'blur(8px)'
+        }}
+        id="navbar"
+      >
+        <div className="flex justify-between items-center w-full">
+          <div className="flex items-center gap-2 animate-fade-in">
+            <div className="border border-gold rotate-45 flex items-center justify-center" style={{ width: '2rem', height: '2rem' }}>
+              <div className="rotate-0" style={{ width: '1rem', height: '1rem', backgroundColor: 'rgba(198, 166, 101, 0.5)' }}></div>
+            </div>
+            <div className="ml-4 text-white font-bold font-heading" style={{ fontSize: '1.25rem', letterSpacing: '0.2em' }}>
+              SADIT <span style={{ color: '#c6a665' }}>ADITYA</span>
+            </div>
+          </div>
 
-      <div className="hidden md:flex items-center gap-10 animate-fade-in delay-200">
-        <Link
-          to="/"
-          className="text-xs tracking-[0.2em] text-white hover:text-gold transition-colors uppercase font-semibold relative group"
-        >
-          Home
-          <span className="absolute -bottom-2 left-1/2 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-        </Link>
-        <Link
-          to="/projects"
-          className="text-xs tracking-[0.2em] text-gray-400 hover:text-gold transition-colors uppercase font-semibold"
-        >
-          Projects
-        </Link>
-        <a
-          href="#profile"
-          className="text-xs tracking-[0.2em] text-gray-400 hover:text-gold transition-colors uppercase font-semibold"
-        >
-          About
-        </a>
-        <a
-          href="#contact"
-          className="text-xs tracking-[0.2em] text-gray-400 hover:text-gold transition-colors uppercase font-semibold"
-        >
-          Contact
-        </a>
-      </div>
+          <div className="desktop-only items-center gap-10 animate-fade-in delay-200">
+            <Link to="/" className="desktop-nav-link" style={{ color: 'white' }}>Home</Link>
+            <Link to="/projects" className="desktop-nav-link">Projects</Link>
+            <a href="#profile" className="desktop-nav-link">About</a>
+            <a href="#contact" className="desktop-nav-link">Contact</a>
+          </div>
 
-      <button className="btn-gothic-outline text-[10px] md:text-xs font-bold animate-fade-in delay-400">
-        Hire Me
-      </button>
-    </nav>
+          <div className="flex items-center gap-4">
+            <button className="desktop-only btn-gothic-outline font-bold animate-fade-in delay-400" style={{ fontSize: '0.75rem' }}>
+              Hire Me
+            </button>
+            
+            <button 
+              className="mobile-only animate-fade-in delay-400 focus:outline-none"
+              style={{ color: '#c6a665', fontSize: '1.5rem', background: 'none', border: 'none', cursor: 'pointer' }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+            </button>
+          </div>
+        </div>
+
+        <div className={`mobile-menu-container flex flex-col items-center gap-6 ${isMobileMenuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'}`}>
+          <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link" style={{ color: 'white' }}>Home</Link>
+          <Link to="/projects" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">Projects</Link>
+          <a href="#profile" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">About</a>
+          <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">Contact</a>
+        </div>
+      </nav>
+    </>
   );
 };
 
