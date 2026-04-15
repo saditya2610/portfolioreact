@@ -1,17 +1,10 @@
-import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import React, { useEffect, useRef, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import ParticleCanvas from '../component/ParticleCanvas';
 import ChatbotWidget from '../component/ChatbotWidget';
 import ScrollReveal from '../component/ScrollReveal';
 
 // Static data moved outside component to prevent re-creation
-const SKILLS_DATA = [
-    { name: "HTML / CSS", percentage: 97 },
-    { name: "UI / UX", percentage: 92 },
-    { name: "React JS", percentage: 90 },
-    { name: "PHP (Laravel)", percentage: 80 },
-    { name: "MySQL", percentage: 95 },
-];
 
 const EXPERIENCE_DATA = [
     {

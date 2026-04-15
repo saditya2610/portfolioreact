@@ -1,6 +1,27 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ChatbotWidget.css';
 
+const questionSuggestions = {
+    en: [
+        "What are Sadit's skills?",
+        "Tell me about his projects",
+        "Show me SISPOL project",
+        "How to contact him?"
+    ],
+    id_formal: [
+        "Apa keahlian Sadit?",
+        "Ceritakan tentang proyeknya",
+        "Tunjukkan proyek SISPOL",
+        "Bagaimana cara menghubunginya?"
+    ],
+    id_gaul: [
+        "Skill Sadit apa aja sih?",
+        "Project kerennya apa nih?",
+        "Bahas dong proyek SISPOL",
+        "Gimana cara kontak dia?"
+    ]
+};
+
 const ChatbotWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
@@ -13,31 +34,8 @@ const ChatbotWidget = () => {
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const [suggestedQuestions, setSuggestedQuestions] = useState([]);
-    const [chatHistory, setChatHistory] = useState([]);
     const [languageMode, setLanguageMode] = useState('auto'); // auto, en, id_formal, id_gaul
     const messagesEndRef = useRef(null);
-
-    // Suggested questions based on language mode
-    const questionSuggestions = {
-        en: [
-            "What are Sadit's skills?",
-            "Tell me about his projects",
-            "Show me SISPOL project",
-            "How to contact him?"
-        ],
-        id_formal: [
-            "Apa keahlian Sadit?",
-            "Ceritakan tentang proyeknya",
-            "Tunjukkan proyek SISPOL",
-            "Bagaimana cara menghubunginya?"
-        ],
-        id_gaul: [
-            "Skill Sadit apa aja sih?",
-            "Project kerennya apa nih?",
-            "Bahas dong proyek SISPOL",
-            "Gimana cara kontak dia?"
-        ]
-    };
 
     // Detect language from input
     const detectLanguage = (text) => {
@@ -110,6 +108,7 @@ const ChatbotWidget = () => {
         scrollToBottom();
         // Initialize with English suggestions
         setSuggestedQuestions(questionSuggestions.en);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [messages]);
 
     // Quick reply handler
@@ -145,7 +144,6 @@ const ChatbotWidget = () => {
             language: detectedLang
         };
         setMessages(prev => [...prev, userMessage]);
-        setChatHistory(prev => [...prev, userMessageText]);
 
         if (!isQuickReply) {
             setInput('');

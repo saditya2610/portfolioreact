@@ -89,6 +89,30 @@ const Projects = () => {
             image: "/assets/img/blog/bumdeslaporan.png",
             description: "Sistem pelaporan keuangan untuk Badan Usaha Milik Desa (BUMDES) yang membantu mengelola dan memantau laporan keuangan desa.",
             link: "#"
+        },
+        {
+            id: 11,
+            title: "Teknik Informatika | UIN Suska Riau",
+            category: "Web App",
+            image: "/assets/img/blog/webtif.png",
+            description: "Website resmi Program Studi Teknik Informatika UIN Sultan Syarif Kasim Riau.",
+            link: "https://tif.uin-suska.ac.id/"
+        },
+        {
+            id: 12,
+            title: "Game Dev Pekanbaru",
+            category: "Web App",
+            image: "/assets/img/blog/gamedev.jpeg",
+            description: "Website komunitas Game Developer di Pekanbaru untuk berbagi informasi dan proyek game.",
+            link: "https://gamedevpku.vercel.app/"
+        },
+        {
+            id: 13,
+            title: "Visitlab Univrab",
+            category: "Web App",
+            image: "/assets/img/blog/visitlab.png",
+            description: "Website laboratorium kunjungan Universitas Abdurrab untuk mengelola jadwal dan informasi kunjungan lab.",
+            link: "https://visitlab.univrab.ac.id/"
         }
     ];
 
