@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './ChatbotWidget.css';
 
 const questionSuggestions = {
@@ -23,11 +24,12 @@ const questionSuggestions = {
 };
 
 const ChatbotWidget = () => {
+    const { t } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
         {
             sender: 'bot',
-            text: 'Hi! How are you today? I\'m your AI assistant for Sadit Aditya\'s portfolio. I\'m here to help you learn about his skills, projects, and experience. What would you like to know?',
+            text: t('chatbot.greeting'),
             id: Date.now()
         }
     ]);
@@ -438,8 +440,8 @@ const ChatbotWidget = () => {
                         <div className="chatbot-title">
                             <span className="status-dot"></span>
                             <div className="title-content">
-                                AI Assistant
-                                <div className="subtitle">Ask me about Sadit's portfolio!</div>
+                                {t('chatbot.title')}
+                                <div className="subtitle">{t('chatbot.subtitle')}</div>
                             </div>
                         </div>
                         <div className="header-controls">
@@ -481,7 +483,7 @@ const ChatbotWidget = () => {
                                     <span></span>
                                     <span></span>
                                     <span></span>
-                                    <span>Typing...</span>
+                                    <span>{t('chatbot.typing')}</span>
                                 </div>
                             </div>
                         )}
@@ -491,7 +493,7 @@ const ChatbotWidget = () => {
                     {/* Suggested Questions */}
                     {suggestedQuestions.length > 0 && !isTyping && (
                         <div className="suggested-questions">
-                            <div className="suggestions-label">Quick questions:</div>
+                            <div className="suggestions-label">{t('chatbot.quickQuestions')}</div>
                             <div className="suggestions-grid">
                                 {suggestedQuestions.map((question, index) => (
                                     <button
@@ -513,9 +515,7 @@ const ChatbotWidget = () => {
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             onKeyPress={handleKeyPress}
-                            placeholder={languageMode.includes('id') ?
-                                "Ketik pesan kamu di sini..." :
-                                "Type your message here..."}
+                            placeholder={t('chatbot.placeholder')}
                             disabled={isTyping}
                         />
                         <div className="input-controls">

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 const Footer = () => {
+    const { t } = useLanguage();
     return (
         <footer className="bg-black pt-20 pb-10 border-t border-gray-900 relative">
             <div className="container mx-auto px-6 text-center">
@@ -45,13 +47,13 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-widest text-gray-600 mb-8">
-                    <Link to="/" className="hover:text-white transition-colors">Privacy Policy</Link>
-                    <Link to="/" className="hover:text-white transition-colors">Terms of Service</Link>
-                    <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+                    <Link to="/" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>
+                    <Link to="/" className="hover:text-white transition-colors">{t('footer.terms')}</Link>
+                    <a href="#contact" className="hover:text-white transition-colors">{t('footer.contact')}</a>
                 </div>
 
                 <p className="text-gray-700 text-[10px] uppercase tracking-wider">
-                    © 2025 Surya Aditya GD. All Rights Reserved.
+                    © 2025 Surya Aditya GD. {t('footer.rights')}
                 </p>
             </div>
         </footer>

@@ -1,8 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import ParticleCanvas from '../component/ParticleCanvas';
 import ScrollReveal from '../component/ScrollReveal';
 
 const Projects = () => {
+    const { t, language } = useLanguage();
     const [filter, setFilter] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
     const [revealKey, setRevealKey] = useState(0);
@@ -144,14 +146,14 @@ const Projects = () => {
                 <div className="text-center mb-12 reveal">
                     <div className="flex items-center justify-center gap-4 mb-4">
                         <div className="h-[1px] w-10 bg-gold/50"></div>
-                        <span className="text-gold text-xs tracking-[0.4em] uppercase">All Projects</span>
+                        <span className="text-gold text-xs tracking-[0.4em] uppercase">{t('projects.tag')}</span>
                         <div className="h-[1px] w-10 bg-gold/50"></div>
                     </div>
                     <h2 className="text-3xl md:text-5xl text-white drop-shadow-lg">
-                        <span className="text-gradient-gold">Complete</span> Portfolio
+                        <span className="text-gradient-gold">{t('projects.title1')}</span> {t('projects.title2')}
                     </h2>
                     <p className="mt-4 max-w-2xl mx-auto text-gray-400 text-sm md:text-base">
-                        Search and filter through my project collection.
+                        {t('projects.desc')}
                     </p>
                 </div>
 
@@ -160,7 +162,7 @@ const Projects = () => {
                     <div className="relative group">
                         <input
                             type="text"
-                            placeholder="Search projects by title or description..."
+                            placeholder={t('projects.search')}
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="w-full bg-black/60 border border-gold/30 p-4 pl-12 text-gold text-sm focus:outline-none focus:border-gold transition-all duration-300 backdrop-blur-md placeholder:text-gold/40"
@@ -240,7 +242,7 @@ const Projects = () => {
                                         </p>
                                         <div className="flex items-center text-gold text-xs tracking-widest uppercase font-bold group/link">
                                             <span className="flex items-center">
-                                                {project.link === '#' ? 'Locked' : 'View Project'}
+                                                {project.link === '#' ? t('projects.locked') : t('projects.viewProject')}
                                                 <span className="ml-2 transform transition-transform group-hover/link:translate-x-2">→</span>
                                             </span>
                                         </div>
@@ -253,20 +255,20 @@ const Projects = () => {
                             <div className="mb-4 inline-block p-4 rounded-full border border-gold/20">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="opacity-50"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                             </div>
-                            <h3 className="text-xl text-white mb-2">No projects found</h3>
-                            <p className="text-gray-500">Try adjusting your search term or filter category.</p>
+                            <h3 className="text-xl text-white mb-2">{t('projects.noProjects')}</h3>
+                            <p className="text-gray-500">{t('projects.noProjectsDesc')}</p>
                             <button 
                                 onClick={() => {setSearchTerm(''); setFilter('All');}}
                                 className="mt-6 text-gold text-xs tracking-widest uppercase border border-gold/40 px-6 py-2 hover:bg-gold hover:text-black transition-all"
                             >
-                                Reset Filters
+                                {t('projects.reset')}
                             </button>
                         </div>
                     )}
 
                     {/* Total Count */}
                     <p className="text-center text-gray-600 text-[10px] tracking-widest uppercase mt-12 reveal">
-                        Showing {filtered.length} of {projects.length} projects
+                        {t('projects.showing').replace('{count}', filtered.length).replace('{total}', projects.length)}
                     </p>
                 </div>
             </section>

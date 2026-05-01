@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,15 +73,22 @@ const Header = () => {
           </div>
 
           <div className="desktop-only items-center gap-10 animate-fade-in delay-200">
-            <Link to="/" className="desktop-nav-link" style={{ color: 'white' }}>Home</Link>
-            <Link to="/projects" className="desktop-nav-link">Projects</Link>
-            <a href="#profile" className="desktop-nav-link">About</a>
-            <a href="#contact" className="desktop-nav-link">Contact</a>
+            <Link to="/" className="desktop-nav-link" style={{ color: 'white' }}>{t('nav.home')}</Link>
+            <Link to="/projects" className="desktop-nav-link">{t('nav.projects')}</Link>
+            <a href="#profile" className="desktop-nav-link">{t('nav.about')}</a>
+            <a href="#contact" className="desktop-nav-link">{t('nav.contact')}</a>
           </div>
 
           <div className="flex items-center gap-4">
+            <button 
+              onClick={toggleLanguage} 
+              className="text-xs font-bold px-2 py-1 border border-gold rounded text-gold hover:bg-gold hover:text-black transition-colors animate-fade-in delay-300"
+            >
+              {language === 'id' ? 'ID' : 'EN'}
+            </button>
+            
             <button className="desktop-only btn-gothic-outline font-bold animate-fade-in delay-400" style={{ fontSize: '0.75rem' }}>
-              Hire Me
+              {t('nav.hire')}
             </button>
             
             <button 
@@ -93,10 +102,10 @@ const Header = () => {
         </div>
 
         <div className={`mobile-menu-container flex flex-col items-center gap-6 ${isMobileMenuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'}`}>
-          <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link" style={{ color: 'white' }}>Home</Link>
-          <Link to="/projects" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">Projects</Link>
-          <a href="#profile" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">About</a>
-          <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">Contact</a>
+          <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link" style={{ color: 'white' }}>{t('nav.home')}</Link>
+          <Link to="/projects" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">{t('nav.projects')}</Link>
+          <a href="#profile" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">{t('nav.about')}</a>
+          <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">{t('nav.contact')}</a>
         </div>
       </nav>
     </>

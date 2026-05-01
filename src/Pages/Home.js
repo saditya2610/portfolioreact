@@ -1,119 +1,13 @@
 import React, { useEffect, useRef, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import ParticleCanvas from '../component/ParticleCanvas';
 import ChatbotWidget from '../component/ChatbotWidget';
 import ScrollReveal from '../component/ScrollReveal';
+import { getExperienceData, getEducationData, getProjectsData, getServicesData } from '../utils/data';
 
-// Static data moved outside component to prevent re-creation
+// Static data moved to utils/data.js
 
-const EXPERIENCE_DATA = [
-    {
-        id: 1,
-        company: "Universitas Abdurrab Pekanbaru",
-        role: "IT, Programmer (Full Time)",
-        period: "Jan 2024 - Present",
-        desc: "As Mobile Flutter Developer Programmer"
-    },
-    {
-        id: 2,
-        company: "Koni Provinsi Riau",
-        role: "IT, Application Implementor (Contract)",
-        period: "Aug 2023 - Dec 2023",
-        desc: "As IT support and Implementor Application/System Website Monitor Sports"
-    },
-    {
-        id: 3,
-        company: "Dinas Perhubungan Provinsi Riau",
-        role: "Publication Service, Programmer",
-        period: "2022-2022",
-        desc: "Internship as a Publication Service and Programmer"
-    },
-    {
-        id: 4,
-        company: "Youtube Channel",
-        role: "Content Creator",
-        period: "2017-Present",
-        desc: "As a Content Creator on youtube Channel Sadit Aditya"
-    }
-];
-
-const EDUCATION_DATA = [
-    {
-        institution: "UIN SUSKA RIAU",
-        degree: "Graduation (Learning and Management Science)",
-        period: "2019 - 2023",
-        desc: "Pekanbaru, Riau, Indonesia."
-    },
-    {
-        institution: "Digitalent Scholarship (Kominfo)",
-        degree: "Frontend Web Development (FGA)",
-        period: "2022",
-        desc: "Learning React JS Web Development."
-    },
-    {
-        institution: "SMAN 4 Pekanbaru",
-        degree: "Senior High School",
-        period: "2016 - 2018",
-        desc: "Science Major"
-    }
-];
-
-const PROJECTS_DATA = [
-    {
-        id: 1,
-        category: "Web App",
-        title: "Sistem Polling (SISPOL)",
-        description: "Sistem polling Untuk Melakukan Penilaian dari Berbagai Perusahaan yang bekerja sama dengan Dishub Provinsi Riau.",
-        image: "/assets/img/blog/sispol.png",
-        link: "https://github.com/saditya2610/sispol",
-        delay: 0
-    },
-    {
-        id: 2,
-        category: "Mobile App",
-        title: "Univrab Mobile",
-        description: "Aplikasi Absensi Universitas Abdurrab berbasis Mobile.",
-        image: "/assets/img/blog/mobile.png",
-        link: "https://github.com/saditya2610/univrabmobile",
-        delay: 100
-    },
-    {
-        id: 3,
-        category: "Web Design",
-        title: "Web Fakultas Teknik",
-        description: "Web CMS Fakultas Teknik Universitas Abdurrab.",
-        image: "/assets/img/blog/Web_Fakul.png",
-        link: "https://fakultas-teknik.univrab.ac.id/",
-        delay: 200
-    }
-];
-
-const SERVICES_DATA = [
-    {
-        icon: "fas fa-pencil-alt",
-        title: "Working Hard",
-        description: "Always believe in hard-work with Allah May Great my profession",
-        delay: "100"
-    },
-    {
-        icon: "fas fa-palette",
-        title: "UI/UX Design",
-        description: "Senang Melakukan Design UI UX untuk melakukan sebuah Produk(web design)",
-        delay: "200"
-    },
-    {
-        icon: "fas fa-globe",
-        title: "Web Design",
-        description: "Menggunakan Figma dan Adobe Photoshop 2020",
-        delay: "300"
-    },
-    {
-        icon: "fas fa-code",
-        title: "Web Development",
-        description: "Membuat Berdasarkan Keinginan Jenis Web Yang dibutuhkan",
-        delay: "400"
-    }
-];
 
 // Optimized components with React.memo
 const StatCard = React.memo(({ icon, number, description, delay }) => (
@@ -168,14 +62,16 @@ const ProjectCard = React.memo(({ project, index }) => (
 ));
 
 const Home = () => {
+    const { t } = useLanguage();
     const heroBgRef = useRef(null);
     const heroContentRef = useRef(null);
     const charBgTextRef = useRef(null);
 
     // Memoized data to prevent unnecessary re-renders
-    const experienceData = useMemo(() => EXPERIENCE_DATA, []);
-    const educationData = useMemo(() => EDUCATION_DATA, []);
-    const projectsData = useMemo(() => PROJECTS_DATA, []);
+    const experienceData = useMemo(() => getExperienceData(t), [t]);
+    const educationData = useMemo(() => getEducationData(t), [t]);
+    const projectsData = useMemo(() => getProjectsData(t), [t]);
+    const servicesData = useMemo(() => getServicesData(t), [t]);
 
     // Optimized scroll handler with useCallback
     const handleScroll = useCallback(() => {
@@ -288,11 +184,11 @@ const Home = () => {
 
                     <div className="flex justify-center gap-6 mt-12 animate-fade-up delay-800">
                         <Link to="#about" className="btn-gothic-fill">
-                            Explore My Work
+                            {t('home.hero.explore')}
                             <i className="fas fa-arrow-down ml-2"></i>
                         </Link>
                         <a href="#contact" className="btn-gothic-outline" rel="noopener noreferrer">
-                            Get In Touch
+                            {t('home.hero.contact')}
                         </a>
                     </div>
                 </div>
@@ -305,11 +201,11 @@ const Home = () => {
                 <div className="text-center mb-20 reveal">
                     <div className="flex items-center justify-center gap-4 mb-4">
                         <div className="h-[1px] w-10 bg-gold/50"></div>
-                        <span className="text-gold text-xs tracking-[0.4em] uppercase">Portfolio</span>
+                        <span className="text-gold text-xs tracking-[0.4em] uppercase">{t('home.portfolio.tag')}</span>
                         <div className="h-[1px] w-10 bg-gold/50"></div>
                     </div>
                     <h2 className="text-3xl md-text-5xl text-white drop-shadow-lg">
-                        <span className="text-gradient-gold">Latest</span> Projects
+                        <span className="text-gradient-gold">{t('home.portfolio.title1')}</span> {t('home.portfolio.title2')}
                     </h2>
                 </div>
 
@@ -323,7 +219,7 @@ const Home = () => {
 
                 <div className="text-center mt-12 reveal">
                     <Link to="/projects" className="btn-gothic-outline inline-block">
-                        Lihat Proyek Lainnya
+                        {t('home.portfolio.more')}
                         <i className="fas fa-arrow-right ml-2"></i>
                     </Link>
                 </div>
@@ -334,10 +230,10 @@ const Home = () => {
                 <div className="text-center mb-20 reveal relative z-10">
                     <div className="flex items-center justify-center gap-4 mb-6">
                         <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-gold"></div>
-                        <span className="text-gold text-xs tracking-[0.4em] uppercase font-serif">Journey</span>
+                        <span className="text-gold text-xs tracking-[0.4em] uppercase font-serif">{t('home.experience.tag')}</span>
                         <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-gold"></div>
                     </div>
-                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">EDUCATION & <span className="text-gradient-gold">EXPERIENCE</span></h3>
+                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">{t('home.experience.title1')}<span className="text-gradient-gold">{t('home.experience.title2')}</span></h3>
                     <div className="w-32 h-1 bg-gradient-to-r from-gold to-transparent mx-auto mt-6"></div>
                 </div>
 
@@ -345,10 +241,10 @@ const Home = () => {
                 <div className="relative z-10">
                     <div className="text-center mb-16 reveal">
                         <h4 className="text-2xl md:text-3xl font-serif text-white mb-4">
-                            <span className="text-gold">01.</span> EDUCATION PATH
+                            <span className="text-gold">01.</span> {t('home.experience.eduPath')}
                         </h4>
                         <div className="inline-block px-6 py-2 border border-gold/30 bg-[#0a0a0a] rounded-full">
-                            <span className="text-gold text-sm tracking-wider">Academic Journey</span>
+                            <span className="text-gold text-sm tracking-wider">{t('home.experience.academic')}</span>
                         </div>
                     </div>
 
@@ -401,10 +297,10 @@ const Home = () => {
                 <div className="relative z-10 mb-20">
                     <div className="text-center mb-16 reveal">
                         <h4 className="text-2xl md:text-3xl font-serif text-white mb-4">
-                            <span className="text-gold">02.</span> EXPERIENCE PATH
+                            <span className="text-gold">02.</span> {t('home.experience.expPath')}
                         </h4>
                         <div className="inline-block px-6 py-2 border border-gold/30 bg-[#0a0a0a] rounded-full">
-                            <span className="text-gold text-sm tracking-wider">Professional Journey</span>
+                            <span className="text-gold text-sm tracking-wider">{t('home.experience.professional')}</span>
                         </div>
                     </div>
 
@@ -474,15 +370,14 @@ const Home = () => {
 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-20 reveal">
-                        <h3 className="text-4xl font-serif text-white mb-2">What I Do</h3>
+                        <h3 className="text-4xl font-serif text-white mb-2">{t('home.services.title')}</h3>
                         <div className="w-16 h-1 bg-gold mx-auto mt-4 mb-8"></div>
                         <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                            At present time I'm working on a multi-role, as a Web Developer I design and create various websites.
-                            And as UI/UX Designer I create many designs for Web Applications and Mobile applications.
+                            {t('home.services.desc')}
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20">
-                            {SERVICES_DATA.map((service, index) => (
+                            {servicesData.map((service, index) => (
                                 <ServiceCard
                                     key={index}
                                     icon={service.icon}
@@ -599,28 +494,27 @@ const Home = () => {
                             </div>
 
                             <div className="profile-text-wrapper reveal" style={{ transitionDelay: '300ms' }}>
-                                <h3 className="profile-greeting">Hello! My Name is Surya Aditya</h3>
-                                <h4 style={{ color: '#c6a665', fontSize: '0.875rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1.5rem', fontWeight: 'bold' }}>also known as Sadit Aditya</h4>
+                                <h3 className="profile-greeting">{t('home.about.greeting')}</h3>
+                                <h4 style={{ color: '#c6a665', fontSize: '0.875rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1.5rem', fontWeight: 'bold' }}>{t('home.about.aka')}</h4>
 
                                 <p style={{ color: '#9ca3af', lineHeight: '1.8', fontWeight: '300', marginBottom: '2rem', fontSize: '1rem' }}>
-                                    I am a <span style={{ color: '#e5e7eb', fontWeight: '500' }}>Frontend Developer</span> & <span style={{ color: '#e5e7eb', fontWeight: '500' }}>Web Designer</span> from Pekanbaru, Riau, Indonesia. I enjoy
-                                    building everything from small business websites to rich, interactive web applications. 
-                                    If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me
-                                    <a style={{ color: '#c6a665', textDecoration: 'underline', marginLeft: '0.5rem', fontWeight: '500' }} href="https://wa.me/6289643119126">here.</a>
+                                    {t('home.about.desc1')}<span style={{ color: '#e5e7eb', fontWeight: '500' }}>{t('home.about.desc1_1')}</span>{t('home.about.desc1_2')}<span style={{ color: '#e5e7eb', fontWeight: '500' }}>{t('home.about.desc1_3')}</span>{t('home.about.desc1_4')}
                                     <br/><br/>
-                                    I design and build digital products with simple, beautiful code. I specialize in custom
-                                    web theme development and truly love what I do.
+                                    {t('home.about.desc2')}
+                                    <a style={{ color: '#c6a665', textDecoration: 'underline', marginLeft: '0.5rem', fontWeight: '500' }} href="https://wa.me/6289643119126">{t('home.about.desc2_link')}</a>
+                                    <br/><br/>
+                                    {t('home.about.desc3')}
                                 </p>
 
                                 <div className="profile-buttons">
                                     <a href="/assets/cv/Surya Aditya GD CV Update 2024.pdf" target="_blank" rel="noreferrer" className="btn-gothic-outline text-center">
-                                        See My CV
+                                        {t('home.about.btn_cv')}
                                     </a>
                                     <a href="https://wa.me/6289643119126" target="_blank" rel="noreferrer" className="btn-gothic-fill text-center">
-                                        Hire Me
+                                        {t('home.about.btn_hire')}
                                     </a>
                                     <a href="/assets/cv/Portfolio Surya Aditya GD.pdf" target="_blank" rel="noreferrer" className="btn-gothic-outline text-center">
-                                        Short Portfolio
+                                        {t('home.about.btn_portfolio')}
                                     </a>
                                 </div>
                             </div>
@@ -631,27 +525,161 @@ const Home = () => {
                                 <StatCard
                                     icon="fas fa-pencil-alt"
                                     number="0007"
-                                    description="Web Design Completed For Mini Project"
+                                    description={t('home.about.stats.stat1')}
                                     delay="100"
                                 />
                                 <StatCard
                                     icon="fas fa-crop-alt"
                                     number="0040"
-                                    description="Graphic Design"
+                                    description={t('home.about.stats.stat2')}
                                     delay="200"
                                 />
                                 <StatCard
                                     icon="fas fa-bolt"
                                     number="0004"
-                                    description="Website Created"
+                                    description={t('home.about.stats.stat3')}
                                     delay="300"
                                 />
                                 <StatCard
                                     icon="fas fa-coffee"
                                     number="0025"
-                                    description="Cups Coffee Taken"
+                                    description={t('home.about.stats.stat4')}
                                     delay="400"
                                 />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Content Creator Section */}
+            <section id="content-creator" className="py-24 px-6 relative bg-gradient-to-b from-[#080808] to-[#050505] z-10 overflow-hidden">
+                {/* Decorative background elements */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-red-900/10 blur-[100px] rounded-full pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-900/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+                <div className="max-w-6xl mx-auto relative z-10">
+                    <div className="text-center mb-16 reveal">
+                        <div className="flex items-center justify-center gap-4 mb-4">
+                            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-red-600"></div>
+                            <span className="text-red-500 text-xs tracking-[0.4em] uppercase font-bold flex items-center gap-2">
+                                <i className="fab fa-youtube text-lg"></i> {t('home.creator.tag')}
+                            </span>
+                            <div className="h-[1px] w-16 bg-gradient-to-l from-transparent to-red-600"></div>
+                        </div>
+                        <h3 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-serif">
+                            {t('home.creator.title1')} <span className="text-red-500 font-bold drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]">{t('home.creator.title2')}</span>
+                        </h3>
+                        <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-transparent mx-auto mb-8"></div>
+                        <p className="text-gray-300 text-base md:text-lg max-w-3xl mx-auto leading-relaxed italic border-l-4 border-red-500 pl-6 text-left md:text-center md:border-l-0 md:pl-0 bg-[#111]/50 p-6 rounded-r-xl md:bg-transparent md:p-0 shadow-lg md:shadow-none">
+                            {t('home.creator.desc')}
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 reveal mt-12">
+                        {/* Channel 1: Sadit Aditya */}
+                        <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-red-900/30 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(239,68,68,0.15)] group relative flex flex-col">
+                            <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            
+                            {/* YouTube Video Embed */}
+                            <div className="relative aspect-video bg-[#050505] overflow-hidden transition-transform duration-700 ease-in-out shrink-0 w-full z-10">
+                                <iframe 
+                                    className="absolute inset-0 w-full h-full" 
+                                    src="https://www.youtube.com/embed/9FTrWk9wAhE" 
+                                    title="YouTube video player" 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerPolicy="strict-origin-when-cross-origin" 
+                                    allowFullScreen
+                                ></iframe>
+                                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm px-3 py-1 rounded text-[10px] text-red-500 font-bold tracking-wider border border-red-500/20 shadow-lg pointer-events-none">
+                                    {t('home.creator.featured')}
+                                </div>
+                            </div>
+
+                            <div className="p-8 relative z-10 flex flex-col items-center text-center flex-grow">
+                                <div className="w-24 h-24 -mt-20 mb-4 rounded-full border-4 border-[#0a0a0a] overflow-hidden bg-[#111] relative z-20 shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+                                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_mYGbACZd4_GGuM4vDUumFxEWsvS4Kg-358gFI_9Ae5BSE=s160-c-k-c0x00ffffff-no-rj" alt="Sadit Aditya" className="w-full h-full object-cover" />
+                                </div>
+                                <h4 className="text-2xl text-white font-bold mb-2 group-hover:text-red-400 transition-colors">Sadit Aditya</h4>
+                                <div className="flex items-center gap-2 text-red-500/90 text-xs font-semibold mb-5 bg-red-500/10 px-4 py-1.5 rounded-full border border-red-500/20">
+                                    <i className="fas fa-gamepad"></i> {t('home.creator.channel1.badge')}
+                                </div>
+                                <p className="text-gray-400 text-sm mb-8 leading-relaxed px-2">
+                                    {t('home.creator.channel1.desc')}
+                                </p>
+
+                                {/* Stats & Action */}
+                                <div className="w-full mt-auto flex flex-col gap-6">
+                                    <div className="flex justify-center items-center gap-10 border-y border-white/5 py-4 w-[90%] mx-auto">
+                                        <div className="flex flex-col items-center">
+                                            <span className="text-white font-black text-xl mb-1">2.73K</span>
+                                            <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{t('home.creator.subscribers')}</span>
+                                        </div>
+                                        <div className="h-10 w-px bg-white/10"></div>
+                                        <div className="flex flex-col items-center">
+                                            <span className="text-white font-black text-xl mb-1">33K</span>
+                                            <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{t('home.creator.views')}</span>
+                                        </div>
+                                    </div>
+
+                                    <a href="https://www.youtube.com/@SaditAditya" target="_blank" rel="noopener noreferrer" className="w-full py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] transform hover:-translate-y-1">
+                                        <i className="fab fa-youtube text-xl"></i> {t('home.creator.visit')}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Channel 2: SADIT ID */}
+                        <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-red-900/30 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(239,68,68,0.15)] group relative flex flex-col">
+                            <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            
+                            {/* YouTube Video Embed */}
+                            <div className="relative aspect-video bg-[#050505] overflow-hidden transition-transform duration-700 ease-in-out shrink-0 w-full z-10">
+                                <iframe 
+                                    className="absolute inset-0 w-full h-full" 
+                                    src="https://www.youtube.com/embed/KmEVEi-XXws" 
+                                    title="YouTube video player" 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerPolicy="strict-origin-when-cross-origin" 
+                                    allowFullScreen
+                                ></iframe>
+                                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm px-3 py-1 rounded text-[10px] text-red-500 font-bold tracking-wider border border-red-500/20 shadow-lg pointer-events-none">
+                                    {t('home.creator.featured')}
+                                </div>
+                            </div>
+
+                            <div className="p-8 relative z-10 flex flex-col items-center text-center flex-grow">
+                                <div className="w-24 h-24 -mt-20 mb-4 rounded-full border-4 border-[#0a0a0a] overflow-hidden bg-[#111] relative z-20 shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+                                    <img src="https://yt3.googleusercontent.com/AGf4CUq8fZIxONiZoGNBVznGjUiXCkk0_Koj1EjxzJU2OVfBP8ZdkLhywoxDGw4e2Fn6DNi5X9U=s160-c-k-c0x00ffffff-no-rj" alt="SADIT ID" className="w-full h-full object-cover" />
+                                </div>
+                                <h4 className="text-2xl text-white font-bold mb-2 group-hover:text-red-400 transition-colors">SADIT ID</h4>
+                                <div className="flex items-center gap-2 text-red-500/90 text-xs font-semibold mb-5 bg-red-500/10 px-4 py-1.5 rounded-full border border-red-500/20">
+                                    <i className="fas fa-headset"></i> {t('home.creator.channel2.badge')}
+                                </div>
+                                <p className="text-gray-400 text-sm mb-8 leading-relaxed px-2">
+                                    {t('home.creator.channel2.desc')}
+                                </p>
+
+                                {/* Stats & Action */}
+                                <div className="w-full mt-auto flex flex-col gap-6">
+                                    <div className="flex justify-center items-center gap-10 border-y border-white/5 py-4 w-[90%] mx-auto">
+                                        <div className="flex flex-col items-center">
+                                            <span className="text-white font-black text-xl mb-1">1.59K</span>
+                                            <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{t('home.creator.subscribers')}</span>
+                                        </div>
+                                        <div className="h-10 w-px bg-white/10"></div>
+                                        <div className="flex flex-col items-center">
+                                            <span className="text-white font-black text-xl mb-1">17K</span>
+                                            <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{t('home.creator.views')}</span>
+                                        </div>
+                                    </div>
+
+                                    <a href="https://www.youtube.com/@SADITID" target="_blank" rel="noopener noreferrer" className="w-full py-3.5 bg-transparent border-2 border-red-600 hover:bg-red-600 hover:text-white text-red-500 font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                                        <i className="fab fa-youtube text-xl"></i> {t('home.creator.visit')}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -664,12 +692,12 @@ const Home = () => {
                     <div className="text-center mb-16 reveal">
                         <div className="flex items-center justify-center gap-4 mb-4">
                             <div className="h-[1px] w-10 bg-gold/50"></div>
-                            <span className="text-gold text-xs tracking-[0.4em] uppercase">Contact</span>
+                            <span className="text-gold text-xs tracking-[0.4em] uppercase">{t('nav.contact')}</span>
                             <div className="h-[1px] w-10 bg-gold/50"></div>
                         </div>
-                        <h3 className="text-3xl md:text-4xl text-white mb-4">Get In Touch</h3>
+                        <h3 className="text-3xl md:text-4xl text-white mb-4">{t('home.contact.title')}</h3>
                         <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
-                            Feel free to reach out to me through any of the channels below.
+                            {t('home.contact.subtitle')}
                         </p>
                     </div>
 
