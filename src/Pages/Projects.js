@@ -4,7 +4,7 @@ import ParticleCanvas from '../component/ParticleCanvas';
 import ScrollReveal from '../component/ScrollReveal';
 
 const Projects = () => {
-    const { t, language } = useLanguage();
+    const { t } = useLanguage();
     const [filter, setFilter] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
     const [revealKey, setRevealKey] = useState(0);
