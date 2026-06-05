@@ -24,7 +24,7 @@ const questionSuggestions = {
 };
 
 const ChatbotWidget = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
         {
@@ -38,6 +38,17 @@ const ChatbotWidget = () => {
     const [suggestedQuestions, setSuggestedQuestions] = useState([]);
     const [languageMode, setLanguageMode] = useState('auto'); // auto, en, id_formal, id_gaul
     const messagesEndRef = useRef(null);
+
+    // Sync initial greeting with language context
+    useEffect(() => {
+        setMessages(prev => {
+            const newMessages = [...prev];
+            if (newMessages.length > 0 && newMessages[0].sender === 'bot' && prev.length === 1) {
+                newMessages[0].text = t('chatbot.greeting');
+            }
+            return newMessages;
+        });
+    }, [t, language]);
 
     // Detect language from input
     const detectLanguage = (text) => {

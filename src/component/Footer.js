@@ -49,7 +49,7 @@ const Footer = () => {
                 <div className="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-widest text-gray-600 mb-8">
                     <Link to="/" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>
                     <Link to="/" className="hover:text-white transition-colors">{t('footer.terms')}</Link>
-                    <a href="#contact" className="hover:text-white transition-colors">{t('footer.contact')}</a>
+                    <a href="/#contact" className="hover:text-white transition-colors">{t('footer.contact')}</a>
                 </div>
 
                 <p className="text-gray-700 text-[10px] uppercase tracking-wider">

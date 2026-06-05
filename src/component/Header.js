@@ -75,8 +75,8 @@ const Header = () => {
           <div className="desktop-only items-center gap-10 animate-fade-in delay-200">
             <Link to="/" className="desktop-nav-link" style={{ color: 'white' }}>{t('nav.home')}</Link>
             <Link to="/projects" className="desktop-nav-link">{t('nav.projects')}</Link>
-            <a href="#profile" className="desktop-nav-link">{t('nav.about')}</a>
-            <a href="#contact" className="desktop-nav-link">{t('nav.contact')}</a>
+            <a href="/#profile" className="desktop-nav-link">{t('nav.about')}</a>
+            <a href="/#contact" className="desktop-nav-link">{t('nav.contact')}</a>
           </div>
 
           <div className="flex items-center gap-4">
@@ -104,8 +104,8 @@ const Header = () => {
         <div className={`mobile-menu-container flex flex-col items-center gap-6 ${isMobileMenuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'}`}>
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link" style={{ color: 'white' }}>{t('nav.home')}</Link>
           <Link to="/projects" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">{t('nav.projects')}</Link>
-          <a href="#profile" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">{t('nav.about')}</a>
-          <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">{t('nav.contact')}</a>
+          <a href="/#profile" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">{t('nav.about')}</a>
+          <a href="/#contact" onClick={() => setIsMobileMenuOpen(false)} className="desktop-nav-link">{t('nav.contact')}</a>
         </div>
       </nav>
     </>

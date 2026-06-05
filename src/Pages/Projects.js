@@ -12,109 +12,109 @@ const Projects = () => {
     const projects = useMemo(() => [
         {
             id: 1,
-            title: "Game Dev Pekanbaru",
-            category: "Web App",
+            title: t('projects.p1_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/gamedev.jpeg",
-            description: "Website komunitas Game Developer di Pekanbaru untuk berbagi informasi dan proyek game.",
+            description: t('projects.p1_desc'),
             link: "https://gamedevpku.vercel.app/"
         },
         {
             id: 2,
-            title: "Teknik Informatika | UIN Suska Riau",
-            category: "Web App",
+            title: t('projects.p2_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/webtif.png",
-            description: "Website resmi Program Studi Teknik Informatika UIN Sultan Syarif Kasim Riau.",
+            description: t('projects.p2_desc'),
             link: "https://tif.uin-suska.ac.id/"
         },
         {
             id: 3,
-            title: "Toko Game | HTML CSS Bootstrap",
-            category: "E-Commerce",
+            title: t('projects.p3_title'),
+            category: t('projects.categories.ecommerce'),
             image: "/assets/img/blog/tokogame.png",
-            description: "Toko game dengan harga dan produk yang murah, bersaing, dan terbaik untuk para gamer.",
+            description: t('projects.p3_desc'),
             link: "https://saditya2610.github.io/tokogame.github.io/"
         },
         {
             id: 4,
-            title: "Sistem Polling (SISPOL)",
-            category: "Web App",
+            title: t('projects.p4_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/sispol.png",
-            description: "Sistem polling untuk melakukan penilaian dari berbagai perusahaan yang bekerja sama dengan Dishub Provinsi Riau.",
+            description: t('projects.p4_desc'),
             link: "https://github.com/saditya2610/sispol"
         },
         {
             id: 5,
-            title: "Visitlab Univrab",
-            category: "Web App",
+            title: t('projects.p5_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/visitlab.png",
-            description: "Website laboratorium kunjungan Universitas Abdurrab untuk mengelola jadwal dan informasi kunjungan lab.",
+            description: t('projects.p5_desc'),
             link: "https://visitlab.univrab.ac.id/"
         },
         {
             id: 6,
-            title: "SILABO Universitas Abdurrab",
-            category: "Web App",
+            title: t('projects.p6_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/silabo.png",
-            description: "Sistem informasi SILABO Universitas Abdurrab untuk pengelolaan perkuliahan.",
+            description: t('projects.p6_desc'),
             link: "https://silabo.univrab.ac.id/"
         },
         {
             id: 7,
-            title: "Laporan BUMDES",
-            category: "Web App",
+            title: t('projects.p7_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/bumdeslaporan.png",
-            description: "Sistem pelaporan keuangan untuk Badan Usaha Milik Desa (BUMDES) yang membantu mengelola dan memantau laporan keuangan desa.",
+            description: t('projects.p7_desc'),
             link: "#"
         },
         {
             id: 8,
-            title: "Universitas Abdurrab",
-            category: "Web App",
+            title: t('projects.p8_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/univrabweb.png",
-            description: "Website resmi Universitas Abdurrab yang memuat informasi kampus, fakultas, dan berita terbaru.",
+            description: t('projects.p8_desc'),
             link: "https://univrab.ac.id/"
         },
         {
             id: 9,
-            title: "Teknik Informatika | Univrab",
-            category: "Web App",
+            title: t('projects.p9_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/webti.jpeg",
-            description: "Website resmi Program Studi Teknik Informatika Universitas Abdurrab.",
+            description: t('projects.p9_desc'),
             link: "https://teknik-informatika.univrab.ac.id/"
         },
         {
             id: 10,
-            title: "Web | Fakultas Teknik",
-            category: "Web App",
+            title: t('projects.p10_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/Web_Fakul.png",
-            description: "Web CMS Fakultas Teknik Universitas Abdurrab.",
+            description: t('projects.p10_desc'),
             link: "https://fakultas-teknik.univrab.ac.id/"
         },
         {
             id: 11,
-            title: "Univrab Mobile",
-            category: "Mobile Dev",
+            title: t('projects.p11_title'),
+            category: t('projects.categories.mobileDev'),
             image: "/assets/img/blog/mobile.png",
-            description: "Aplikasi absensi Universitas Abdurrab berbasis mobile.",
+            description: t('projects.p11_desc'),
             link: "https://github.com/saditya2610/univrabmobile"
         },
         {
             id: 12,
-            title: "Kalkulator Sederhana",
-            category: "Web App",
+            title: t('projects.p12_title'),
+            category: t('projects.categories.webApp'),
             image: "/assets/img/blog/kalkulator.png",
-            description: "Kalkulator sederhana menggunakan JavaScript berbasis HTML.",
+            description: t('projects.p12_desc'),
             link: "https://saditya2610.github.io/kalkulator/"
         },
         {
             id: 13,
-            title: "Wordpress | Sadit Aditya",
-            category: "CMS",
+            title: t('projects.p13_title'),
+            category: t('projects.categories.cms'),
             image: "/assets/img/blog/saditadityawordpress.png",
-            description: "Blog yang membahas seputar Sadit Aditya.",
+            description: t('projects.p13_desc'),
             link: "https://saditaditya.wordpress.com/"
         },
-    ], []);
+    ], [t]);
 
     // Get unique categories and normalize them
     const categories = useMemo(() => {
@@ -158,44 +158,44 @@ const Projects = () => {
                 </div>
 
                 <div className="max-w-4xl mx-auto space-y-8 reveal">
-                    {/* Search Bar */}
-                    <div className="relative group">
-                        <input
-                            type="text"
-                            placeholder={t('projects.search')}
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full bg-black/60 border border-gold/30 p-4 pl-12 text-gold text-sm focus:outline-none focus:border-gold transition-all duration-300 backdrop-blur-md placeholder:text-gold/40"
-                            style={{ caretColor: 'var(--color-gold)' }}
-                        />
-                        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/50 group-focus-within:text-gold transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    {/* Search and Filter Container */}
+                    <div className="projects-search-wrapper">
+                        {/* Search Bar */}
+                        <div className="search-input-container">
+                            {/* Glowing background effect */}
+                            <div className="search-input-glow"></div>
+                            <input
+                                type="text"
+                                placeholder={t('projects.search')}
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="search-input-field"
+                            />
+                            <div className="search-icon-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            </div>
+                            {searchTerm && (
+                                <button 
+                                    onClick={() => setSearchTerm('')}
+                                    className="search-clear-btn"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                </button>
+                            )}
                         </div>
-                        {searchTerm && (
-                            <button 
-                                onClick={() => setSearchTerm('')}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 text-gold/50 hover:text-gold transition-colors"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                            </button>
-                        )}
-                    </div>
 
-                    {/* Filter Tabs */}
-                    <div className="flex flex-wrap justify-center gap-3">
-                        {categories.map(cat => (
-                            <button
-                                key={cat}
-                                onClick={() => setFilter(cat)}
-                                className={`px-5 py-2 text-[10px] tracking-widest uppercase border transition-all duration-300 ${
-                                    filter === cat
-                                        ? 'bg-gold text-black border-gold font-bold scale-105'
-                                        : 'bg-transparent text-gold border-gold/40 hover:border-gold hover:text-white'
-                                }`}
-                            >
-                                {cat}
-                            </button>
-                        ))}
+                        {/* Filter Tabs */}
+                        <div className="filter-tabs-wrapper">
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setFilter(cat)}
+                                    className={`filter-tab-btn ${filter === cat ? 'active' : ''}`}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

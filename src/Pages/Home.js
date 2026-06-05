@@ -183,11 +183,11 @@ const Home = () => {
                     </div>
 
                     <div className="flex justify-center gap-6 mt-12 animate-fade-up delay-800">
-                        <Link to="#about" className="btn-gothic-fill">
+                        <a href="/#projects" className="btn-gothic-fill">
                             {t('home.hero.explore')}
                             <i className="fas fa-arrow-down ml-2"></i>
-                        </Link>
-                        <a href="#contact" className="btn-gothic-outline" rel="noopener noreferrer">
+                        </a>
+                        <a href="/#contact" className="btn-gothic-outline" rel="noopener noreferrer">
                             {t('home.hero.contact')}
                         </a>
                     </div>
@@ -485,7 +485,7 @@ const Home = () => {
                         `}</style>
                         <div id="profile" className="profile-container reveal">
                             <div className="profile-img-wrapper reveal" style={{ transitionDelay: '100ms' }}>
-                                <div className="profile-img-inner">
+                                <div className="profile-img-inner cartoon-image">
                                     <img
                                         src="/assets/img/surya.png"
                                         alt="Profil Surya Aditya"
@@ -553,38 +553,35 @@ const Home = () => {
             </section>
 
             {/* Content Creator Section */}
-            <section id="content-creator" className="py-24 px-6 relative bg-gradient-to-b from-[#080808] to-[#050505] z-10 overflow-hidden">
+            <section id="content-creator" className="creator-section-wrapper">
                 {/* Decorative background elements */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-red-900/10 blur-[100px] rounded-full pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-900/10 blur-[100px] rounded-full pointer-events-none"></div>
+                <div className="creator-bg-glow-left"></div>
+                <div className="creator-bg-glow-right"></div>
 
-                <div className="max-w-6xl mx-auto relative z-10">
-                    <div className="text-center mb-16 reveal">
-                        <div className="flex items-center justify-center gap-4 mb-4">
-                            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-red-600"></div>
-                            <span className="text-red-500 text-xs tracking-[0.4em] uppercase font-bold flex items-center gap-2">
-                                <i className="fab fa-youtube text-lg"></i> {t('home.creator.tag')}
-                            </span>
-                            <div className="h-[1px] w-16 bg-gradient-to-l from-transparent to-red-600"></div>
+                <div className="container relative z-10">
+                    <div className="creator-header reveal">
+                        <div className="creator-tag">
+                            <div className="creator-tag-line"></div>
+                            <i className="fab fa-youtube text-lg"></i> {t('home.creator.tag')}
+                            <div className="creator-tag-line reverse"></div>
                         </div>
-                        <h3 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-serif">
-                            {t('home.creator.title1')} <span className="text-red-500 font-bold drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]">{t('home.creator.title2')}</span>
+                        <h3 className="creator-title">
+                            {t('home.creator.title1')} <span>{t('home.creator.title2')}</span>
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-transparent mx-auto mb-8"></div>
-                        <p className="text-gray-300 text-base md:text-lg max-w-3xl mx-auto leading-relaxed italic border-l-4 border-red-500 pl-6 text-left md:text-center md:border-l-0 md:pl-0 bg-[#111]/50 p-6 rounded-r-xl md:bg-transparent md:p-0 shadow-lg md:shadow-none">
+                        <div className="creator-separator"></div>
+                        <p className="creator-desc">
                             {t('home.creator.desc')}
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 reveal mt-12">
+                    <div className="creator-grid reveal">
                         {/* Channel 1: Sadit Aditya */}
-                        <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-red-900/30 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(239,68,68,0.15)] group relative flex flex-col">
-                            <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="creator-card group">
+                            <div className="creator-card-bg-hover"></div>
                             
                             {/* YouTube Video Embed */}
-                            <div className="relative aspect-video bg-[#050505] overflow-hidden transition-transform duration-700 ease-in-out shrink-0 w-full z-10">
+                            <div className="creator-video-wrapper">
                                 <iframe 
-                                    className="absolute inset-0 w-full h-full" 
                                     src="https://www.youtube.com/embed/9FTrWk9wAhE" 
                                     title="YouTube video player" 
                                     frameBorder="0" 
@@ -592,38 +589,38 @@ const Home = () => {
                                     referrerPolicy="strict-origin-when-cross-origin" 
                                     allowFullScreen
                                 ></iframe>
-                                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm px-3 py-1 rounded text-[10px] text-red-500 font-bold tracking-wider border border-red-500/20 shadow-lg pointer-events-none">
+                                <div className="creator-badge">
                                     {t('home.creator.featured')}
                                 </div>
                             </div>
 
-                            <div className="p-8 relative z-10 flex flex-col items-center text-center flex-grow">
-                                <div className="w-24 h-24 -mt-20 mb-4 rounded-full border-4 border-[#0a0a0a] overflow-hidden bg-[#111] relative z-20 shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-                                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_mYGbACZd4_GGuM4vDUumFxEWsvS4Kg-358gFI_9Ae5BSE=s160-c-k-c0x00ffffff-no-rj" alt="Sadit Aditya" className="w-full h-full object-cover" />
+                            <div className="creator-content">
+                                <div className="creator-avatar">
+                                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_mYGbACZd4_GGuM4vDUumFxEWsvS4Kg-358gFI_9Ae5BSE=s160-c-k-c0x00ffffff-no-rj" alt="Sadit Aditya" />
                                 </div>
-                                <h4 className="text-2xl text-white font-bold mb-2 group-hover:text-red-400 transition-colors">Sadit Aditya</h4>
-                                <div className="flex items-center gap-2 text-red-500/90 text-xs font-semibold mb-5 bg-red-500/10 px-4 py-1.5 rounded-full border border-red-500/20">
+                                <h4 className="creator-name">Sadit Aditya</h4>
+                                <div className="creator-role">
                                     <i className="fas fa-gamepad"></i> {t('home.creator.channel1.badge')}
                                 </div>
-                                <p className="text-gray-400 text-sm mb-8 leading-relaxed px-2">
+                                <p className="creator-card-desc">
                                     {t('home.creator.channel1.desc')}
                                 </p>
 
                                 {/* Stats & Action */}
-                                <div className="w-full mt-auto flex flex-col gap-6">
-                                    <div className="flex justify-center items-center gap-10 border-y border-white/5 py-4 w-[90%] mx-auto">
-                                        <div className="flex flex-col items-center">
-                                            <span className="text-white font-black text-xl mb-1">2.73K</span>
-                                            <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{t('home.creator.subscribers')}</span>
+                                <div className="creator-stats-container">
+                                    <div className="creator-stats">
+                                        <div className="creator-stat-item">
+                                            <span className="creator-stat-value">2.73K</span>
+                                            <span className="creator-stat-label">{t('home.creator.subscribers')}</span>
                                         </div>
-                                        <div className="h-10 w-px bg-white/10"></div>
-                                        <div className="flex flex-col items-center">
-                                            <span className="text-white font-black text-xl mb-1">33K</span>
-                                            <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{t('home.creator.views')}</span>
+                                        <div className="creator-stat-divider"></div>
+                                        <div className="creator-stat-item">
+                                            <span className="creator-stat-value">33K</span>
+                                            <span className="creator-stat-label">{t('home.creator.views')}</span>
                                         </div>
                                     </div>
 
-                                    <a href="https://www.youtube.com/@SaditAditya" target="_blank" rel="noopener noreferrer" className="w-full py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] transform hover:-translate-y-1">
+                                    <a href="https://www.youtube.com/@SaditAditya" target="_blank" rel="noopener noreferrer" className="creator-btn-primary">
                                         <i className="fab fa-youtube text-xl"></i> {t('home.creator.visit')}
                                     </a>
                                 </div>
@@ -631,13 +628,12 @@ const Home = () => {
                         </div>
 
                         {/* Channel 2: SADIT ID */}
-                        <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-red-900/30 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(239,68,68,0.15)] group relative flex flex-col">
-                            <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="creator-card group">
+                            <div className="creator-card-bg-hover"></div>
                             
                             {/* YouTube Video Embed */}
-                            <div className="relative aspect-video bg-[#050505] overflow-hidden transition-transform duration-700 ease-in-out shrink-0 w-full z-10">
+                            <div className="creator-video-wrapper">
                                 <iframe 
-                                    className="absolute inset-0 w-full h-full" 
                                     src="https://www.youtube.com/embed/KmEVEi-XXws" 
                                     title="YouTube video player" 
                                     frameBorder="0" 
@@ -645,38 +641,38 @@ const Home = () => {
                                     referrerPolicy="strict-origin-when-cross-origin" 
                                     allowFullScreen
                                 ></iframe>
-                                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm px-3 py-1 rounded text-[10px] text-red-500 font-bold tracking-wider border border-red-500/20 shadow-lg pointer-events-none">
+                                <div className="creator-badge">
                                     {t('home.creator.featured')}
                                 </div>
                             </div>
 
-                            <div className="p-8 relative z-10 flex flex-col items-center text-center flex-grow">
-                                <div className="w-24 h-24 -mt-20 mb-4 rounded-full border-4 border-[#0a0a0a] overflow-hidden bg-[#111] relative z-20 shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-                                    <img src="https://yt3.googleusercontent.com/AGf4CUq8fZIxONiZoGNBVznGjUiXCkk0_Koj1EjxzJU2OVfBP8ZdkLhywoxDGw4e2Fn6DNi5X9U=s160-c-k-c0x00ffffff-no-rj" alt="SADIT ID" className="w-full h-full object-cover" />
+                            <div className="creator-content">
+                                <div className="creator-avatar">
+                                    <img src="https://yt3.googleusercontent.com/AGf4CUq8fZIxONiZoGNBVznGjUiXCkk0_Koj1EjxzJU2OVfBP8ZdkLhywoxDGw4e2Fn6DNi5X9U=s160-c-k-c0x00ffffff-no-rj" alt="SADIT ID" />
                                 </div>
-                                <h4 className="text-2xl text-white font-bold mb-2 group-hover:text-red-400 transition-colors">SADIT ID</h4>
-                                <div className="flex items-center gap-2 text-red-500/90 text-xs font-semibold mb-5 bg-red-500/10 px-4 py-1.5 rounded-full border border-red-500/20">
+                                <h4 className="creator-name">SADIT ID</h4>
+                                <div className="creator-role">
                                     <i className="fas fa-headset"></i> {t('home.creator.channel2.badge')}
                                 </div>
-                                <p className="text-gray-400 text-sm mb-8 leading-relaxed px-2">
+                                <p className="creator-card-desc">
                                     {t('home.creator.channel2.desc')}
                                 </p>
 
                                 {/* Stats & Action */}
-                                <div className="w-full mt-auto flex flex-col gap-6">
-                                    <div className="flex justify-center items-center gap-10 border-y border-white/5 py-4 w-[90%] mx-auto">
-                                        <div className="flex flex-col items-center">
-                                            <span className="text-white font-black text-xl mb-1">1.59K</span>
-                                            <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{t('home.creator.subscribers')}</span>
+                                <div className="creator-stats-container">
+                                    <div className="creator-stats">
+                                        <div className="creator-stat-item">
+                                            <span className="creator-stat-value">1.59K</span>
+                                            <span className="creator-stat-label">{t('home.creator.subscribers')}</span>
                                         </div>
-                                        <div className="h-10 w-px bg-white/10"></div>
-                                        <div className="flex flex-col items-center">
-                                            <span className="text-white font-black text-xl mb-1">17K</span>
-                                            <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">{t('home.creator.views')}</span>
+                                        <div className="creator-stat-divider"></div>
+                                        <div className="creator-stat-item">
+                                            <span className="creator-stat-value">17K</span>
+                                            <span className="creator-stat-label">{t('home.creator.views')}</span>
                                         </div>
                                     </div>
 
-                                    <a href="https://www.youtube.com/@SADITID" target="_blank" rel="noopener noreferrer" className="w-full py-3.5 bg-transparent border-2 border-red-600 hover:bg-red-600 hover:text-white text-red-500 font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                                    <a href="https://www.youtube.com/@SADITID" target="_blank" rel="noopener noreferrer" className="creator-btn-secondary">
                                         <i className="fab fa-youtube text-xl"></i> {t('home.creator.visit')}
                                     </a>
                                 </div>
