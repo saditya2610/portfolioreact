@@ -179,6 +179,23 @@ const Home = () => {
                                     <i className="fab fa-instagram" aria-hidden="true"></i>
                                 </a>
                             </li>
+                            <li>
+                                <a
+                                    id="cy-effective-orcid-url"
+                                    href="https://orcid.org/0009-0001-6148-4083"
+                                    target="orcid.widget"
+                                    rel="me noopener noreferrer"
+                                    title="ORCID iD: 0009-0001-6148-4083"
+                                    className="text-gold hover:text-white transition-colors flex items-center"
+                                    style={{ verticalAlign: 'top' }}
+                                >
+                                    <img
+                                        src="/assets/img/orcid_16x16.png"
+                                        alt="ORCID iD icon"
+                                        style={{ width: '1.5rem', height: '1.5rem' }}
+                                    />
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -515,6 +532,35 @@ const Home = () => {
                                     </a>
                                     <a href="/assets/cv/Portfolio Surya Aditya GD.pdf" target="_blank" rel="noreferrer" className="btn-gothic-outline text-center">
                                         {t('home.about.btn_portfolio')}
+                                    </a>
+                                </div>
+
+                                {/* ORCID iD */}
+                                <div style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                    <a
+                                        id="cy-effective-orcid-url"
+                                        href="https://orcid.org/0009-0001-6148-4083"
+                                        target="orcid.widget"
+                                        rel="me noopener noreferrer"
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '0.4rem',
+                                            color: '#c6a665',
+                                            textDecoration: 'underline',
+                                            fontSize: '0.85rem',
+                                            verticalAlign: 'top',
+                                            transition: 'color 0.3s'
+                                        }}
+                                        onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+                                        onMouseLeave={e => e.currentTarget.style.color = '#c6a665'}
+                                    >
+                                        <img
+                                            src="/assets/img/orcid_16x16.png"
+                                            style={{ width: '1em', marginInlineStart: '0' }}
+                                            alt="ORCID iD icon"
+                                        />
+                                        https://orcid.org/0009-0001-6148-4083
                                     </a>
                                 </div>
                             </div>

@@ -46,6 +46,25 @@ const Footer = () => {
                     </a>
                 </div>
 
+                {/* ORCID iD */}
+                <div className="flex justify-center mb-8">
+                    <a
+                        id="cy-effective-orcid-url-footer"
+                        href="https://orcid.org/0009-0001-6148-4083"
+                        target="orcid.widget"
+                        rel="me noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-gray-500 hover:text-gold transition-colors text-xs tracking-wider"
+                        style={{ verticalAlign: 'top' }}
+                    >
+                        <img
+                            src="/assets/img/orcid_16x16.png"
+                            style={{ width: '1em', marginInlineStart: '0.5em' }}
+                            alt="ORCID iD icon"
+                        />
+                        https://orcid.org/0009-0001-6148-4083
+                    </a>
+                </div>
+
                 <div className="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-widest text-gray-600 mb-8">
                     <Link to="/" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>
                     <Link to="/" className="hover:text-white transition-colors">{t('footer.terms')}</Link>
