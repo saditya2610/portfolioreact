@@ -52,13 +52,49 @@ export const getEducationData = (t) => [
 
 export const getProjectsData = (t) => [
     {
+        id: 7,
+        category: t('projects.categories.webApp'),
+        title: "CBT Universitas Abdurrab",
+        description: t('projects.project7_desc'),
+        image: "/assets/img/blog/cbt.png",
+        link: "https://cbt.univrab.ac.id/",
+        delay: 0
+    },
+    {
+        id: 6,
+        category: t('projects.categories.webApp'),
+        title: "SMAKOM Digisport",
+        description: t('projects.project6_desc'),
+        image: "/assets/img/blog/smakom.png",
+        link: "https://smakom.digisport.id/",
+        delay: 100
+    },
+    {
+        id: 4,
+        category: t('projects.categories.gameDev'),
+        title: "Cardlatro",
+        description: t('projects.project4_desc'),
+        image: "https://img.itch.zone/aW1nLzI3NDIyMDA0LnBuZw==/original/TQ4ybv.png",
+        link: "https://saditya2610.itch.io/cardlatro",
+        delay: 100
+    },
+    {
+        id: 5,
+        category: t('projects.categories.gameDev'),
+        title: "Malpractice Crypt",
+        description: t('projects.project5_desc'),
+        image: "https://img.itch.zone/aW1nLzI3NjI5MTU5LnBuZw==/original/q9PSKW.png",
+        link: "https://saditya2610.itch.io/malpractice-crypt",
+        delay: 100
+    },
+    {
         id: 1,
         category: t('projects.categories.webApp'),
         title: "Sistem Polling (SISPOL)",
         description: t('projects.project1_desc'),
         image: "/assets/img/blog/sispol.png",
         link: "https://github.com/saditya2610/sispol",
-        delay: 0
+        delay: 200
     },
     {
         id: 2,
@@ -67,7 +103,7 @@ export const getProjectsData = (t) => [
         description: t('projects.project2_desc'),
         image: "/assets/img/blog/mobile.png",
         link: "https://github.com/saditya2610/univrabmobile",
-        delay: 100
+        delay: 300
     },
     {
         id: 3,
@@ -76,7 +112,7 @@ export const getProjectsData = (t) => [
         description: t('projects.project3_desc'),
         image: "/assets/img/blog/Web_Fakul.png",
         link: "https://fakultas-teknik.univrab.ac.id/",
-        delay: 200
+        delay: 400
     }
 ];
 

@@ -117,7 +117,8 @@ export const translations = {
         webDesign: "Desain Web",
         ecommerce: "E-Commerce",
         mobileDev: "Pengembangan Mobile",
-        cms: "CMS"
+        cms: "CMS",
+        gameDev: "Pengembangan Game"
       },
       p1_title: "Game Dev Pekanbaru",
       p1_desc: "Website komunitas Game Developer di Pekanbaru untuk berbagi informasi dan proyek game.",
@@ -145,9 +146,21 @@ export const translations = {
       p12_desc: "Kalkulator sederhana menggunakan JavaScript berbasis HTML.",
       p13_title: "Wordpress | Sadit Aditya",
       p13_desc: "Blog yang membahas seputar Sadit Aditya.",
+      p14_title: "Cardlatro",
+      p14_desc: "Game kartu strategi yang dikembangkan dan dirilis di platform itch.io.",
+      p15_title: "Malpractice Crypt",
+      p15_desc: "Game eksplorasi crypt yang dikembangkan dan dirilis di platform itch.io.",
+      p16_title: "SMAKOM Digisport",
+      p16_desc: "Sistem Manajemen Kompetisi Olahraga untuk berbagai kejuaraan seperti PORPROV dan PORKOT.",
+      p17_title: "CBT Universitas Abdurrab",
+      p17_desc: "Sistem Ujian Berbasis Komputer (Computer Based Test) Universitas Abdurrab.",
       project1_desc: "Sistem polling untuk melakukan penilaian dari berbagai perusahaan yang bekerja sama dengan Dishub Provinsi Riau.",
       project2_desc: "Aplikasi absensi Universitas Abdurrab berbasis mobile.",
-      project3_desc: "Web CMS Fakultas Teknik Universitas Abdurrab."
+      project3_desc: "Web CMS Fakultas Teknik Universitas Abdurrab.",
+      project4_desc: "Game kartu strategi yang dikembangkan dan dirilis di platform itch.io.",
+      project5_desc: "Game eksplorasi crypt yang dikembangkan dan dirilis di platform itch.io.",
+      project6_desc: "Sistem Manajemen Kompetisi Olahraga untuk berbagai kejuaraan seperti PORPROV dan PORKOT.",
+      project7_desc: "Sistem Ujian Berbasis Komputer (Computer Based Test) Universitas Abdurrab."
     },
     footer: {
       privacy: "Kebijakan Privasi",
@@ -282,7 +295,8 @@ export const translations = {
         webDesign: "Web Design",
         ecommerce: "E-Commerce",
         mobileDev: "Mobile Dev",
-        cms: "CMS"
+        cms: "CMS",
+        gameDev: "Game Development"
       },
       p1_title: "Game Dev Pekanbaru",
       p1_desc: "Game Developer community website in Pekanbaru for sharing information and game projects.",
@@ -310,9 +324,21 @@ export const translations = {
       p12_desc: "Simple calculator using JavaScript based on HTML.",
       p13_title: "Wordpress | Sadit Aditya",
       p13_desc: "Blog discussing topics around Sadit Aditya.",
+      p14_title: "Cardlatro",
+      p14_desc: "A strategy card game developed and released on the itch.io platform.",
+      p15_title: "Malpractice Crypt",
+      p15_desc: "A crypt exploration game developed and released on the itch.io platform.",
+      p16_title: "SMAKOM Digisport",
+      p16_desc: "Sports Competition Management System for various championships such as PORPROV and PORKOT.",
+      p17_title: "CBT Universitas Abdurrab",
+      p17_desc: "Computer Based Test (CBT) System for Universitas Abdurrab.",
       project1_desc: "Polling system to conduct assessments of various companies collaborating with the Riau Province Transportation Agency.",
       project2_desc: "Mobile-based attendance application for Universitas Abdurrab.",
-      project3_desc: "Web CMS for the Faculty of Engineering, Universitas Abdurrab."
+      project3_desc: "Web CMS for the Faculty of Engineering, Universitas Abdurrab.",
+      project4_desc: "A strategy card game developed and released on the itch.io platform.",
+      project5_desc: "A crypt exploration game developed and released on the itch.io platform.",
+      project6_desc: "Sports Competition Management System for various championships such as PORPROV and PORKOT.",
+      project7_desc: "Computer Based Test (CBT) System for Universitas Abdurrab."
     },
     footer: {
       privacy: "Privacy Policy",
