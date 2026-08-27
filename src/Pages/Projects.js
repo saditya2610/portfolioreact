@@ -11,6 +11,38 @@ const Projects = () => {
 
     const projects = useMemo(() => [
         {
+            id: 17,
+            title: t('projects.p17_title'),
+            category: t('projects.categories.webApp'),
+            image: "/assets/img/blog/cbt.png",
+            description: t('projects.p17_desc'),
+            link: "https://cbt.univrab.ac.id/"
+        },
+        {
+            id: 16,
+            title: t('projects.p16_title'),
+            category: t('projects.categories.webApp'),
+            image: "/assets/img/blog/smakom.png",
+            description: t('projects.p16_desc'),
+            link: "https://smakom.digisport.id/"
+        },
+        {
+            id: 15,
+            title: t('projects.p15_title'),
+            category: t('projects.categories.gameDev'),
+            image: "https://img.itch.zone/aW1nLzI3NjI5MTU5LnBuZw==/original/q9PSKW.png",
+            description: t('projects.p15_desc'),
+            link: "https://saditya2610.itch.io/malpractice-crypt"
+        },
+        {
+            id: 14,
+            title: t('projects.p14_title'),
+            category: t('projects.categories.gameDev'),
+            image: "https://img.itch.zone/aW1nLzI3NDIyMDA0LnBuZw==/original/TQ4ybv.png",
+            description: t('projects.p14_desc'),
+            link: "https://saditya2610.itch.io/cardlatro"
+        },
+        {
             id: 1,
             title: t('projects.p1_title'),
             category: t('projects.categories.webApp'),
