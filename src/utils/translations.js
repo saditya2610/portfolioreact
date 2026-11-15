@@ -31,6 +31,14 @@ export const translations = {
         role3_desc: "Magang sebagai Layanan Publikasi dan Pemrogram",
         role4_desc: "Sebagai Kreator Konten di saluran youtube Sadit Aditya"
       },
+      publications: {
+        pubPath: "PUBLIKASI ILMIAH",
+        academicPub: "Riset & Jurnal Ilmiah",
+        readPaper: "Baca Publikasi",
+        scholarProfile: "Profil Google Scholar",
+        pub1_desc: "Optimasi seleksi fitur menggunakan metode hibrida Genetic Algorithm dan Particle Swarm Optimization (GA-PSO) pada arsitektur 1D-CNN dengan Explainable AI (SHAP) untuk klasifikasi data kraniometrik forensik.",
+        pub2_desc: "Evaluasi perbandingan performansi algoritma Learning Vector Quantization 2 (LVQ 2) dengan metode seleksi fitur Correlation-based Feature Selection (CFS) untuk meningkatkan akurasi klasifikasi."
+      },
       education: {
         edu1_degree: "Kelulusan (Ilmu Pembelajaran dan Manajemen)",
         edu2_degree: "Pengembangan Web Frontend (FGA)",
@@ -208,6 +216,14 @@ export const translations = {
         role2_desc: "As IT support and Implementor Application/System Website Monitor Sports",
         role3_desc: "Internship as a Publication Service and Programmer",
         role4_desc: "As a Content Creator on youtube Channel Sadit Aditya"
+      },
+      publications: {
+        pubPath: "SCIENTIFIC PUBLICATIONS",
+        academicPub: "Research & Journal Articles",
+        readPaper: "Read Publication",
+        scholarProfile: "Google Scholar Profile",
+        pub1_desc: "Feature selection optimization using a hybrid Genetic Algorithm and Particle Swarm Optimization (GA-PSO) framework on 1D-CNN with Explainable AI (SHAP) for forensic craniometric classification.",
+        pub2_desc: "Comparative performance evaluation of the Learning Vector Quantization 2 (LVQ 2) algorithm combined with Correlation-based Feature Selection (CFS) to improve classification accuracy."
       },
       education: {
         edu1_degree: "Graduation (Learning and Management Science)",

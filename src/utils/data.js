@@ -142,3 +142,26 @@ export const getServicesData = (t) => [
         delay: "400"
     }
 ];
+
+export const getPublicationsData = (t) => [
+    {
+        id: 1,
+        title: "Explainable AI (XAI) for feature selection optimization in deep neural networks using the Howells craniometric dataset",
+        authors: "Surya Aditya GD, Robert Marco",
+        journal: "Science, Technology, and Communication Journal (SINTECHCOM), Vol. 7, No. 1",
+        year: "2026",
+        doi: "10.59190/stc.v7i1.411",
+        link: "https://doi.org/10.59190/stc.v7i1.411",
+        desc: t('home.publications.pub1_desc')
+    },
+    {
+        id: 2,
+        title: "Perbandingan Performansi dengan Metode Correlation Based Feature Selection pada LVQ 2",
+        authors: "Surya Aditya GD, Iis Afrianty, Suwanto Sanjaya, Rahmad Abdillah, Lestari Handayani, Fitri Insani",
+        journal: "Jurnal INSTEK (Informatika Sains dan Teknologi), Vol. 8, No. 1, pp. 170–179",
+        year: "2023",
+        doi: "10.24252/instek.v8i1.37301",
+        link: "https://journal.uin-alauddin.ac.id/index.php/instek/article/view/37301",
+        desc: t('home.publications.pub2_desc')
+    }
+];

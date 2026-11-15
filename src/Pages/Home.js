@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import ParticleCanvas from '../component/ParticleCanvas';
 import ChatbotWidget from '../component/ChatbotWidget';
 import ScrollReveal from '../component/ScrollReveal';
-import { getExperienceData, getEducationData, getProjectsData, getServicesData } from '../utils/data';
+import { getExperienceData, getEducationData, getProjectsData, getServicesData, getPublicationsData } from '../utils/data';
 
 // Static data moved to utils/data.js
 
@@ -72,6 +72,7 @@ const Home = () => {
     const educationData = useMemo(() => getEducationData(t), [t]);
     const projectsData = useMemo(() => getProjectsData(t), [t]);
     const servicesData = useMemo(() => getServicesData(t), [t]);
+    const publicationsData = useMemo(() => getPublicationsData(t), [t]);
 
     // Optimized scroll handler with useCallback
     const handleScroll = useCallback(() => {
@@ -242,137 +243,169 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Resume Section with Experience */}
-            <section id="resume" className="py-24 px-6 max-w-7xl mx-auto z-10 relative bg-[#080808]">
-                <div className="text-center mb-20 reveal relative z-10">
-                    <div className="flex items-center justify-center gap-4 mb-6">
-                        <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-gold"></div>
-                        <span className="text-gold text-xs tracking-[0.4em] uppercase font-serif">{t('home.experience.tag')}</span>
-                        <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-gold"></div>
+            {/* Resume Section with Journey Timeline */}
+            <section id="resume" className="journey-section">
+                <div className="journey-container">
+                    <div className="journey-header reveal">
+                        <div className="journey-tag-row">
+                            <div className="journey-tag-line"></div>
+                            <span className="journey-tag-text">{t('home.experience.tag')}</span>
+                            <div className="journey-tag-line reverse"></div>
+                        </div>
+                        <h3 className="journey-main-title">
+                            {t('home.experience.title1')}
+                            <span className="text-gradient-gold">{t('home.experience.title2')}</span>
+                        </h3>
+                        <div className="journey-title-bar"></div>
                     </div>
-                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">{t('home.experience.title1')}<span className="text-gradient-gold">{t('home.experience.title2')}</span></h3>
-                    <div className="w-32 h-1 bg-gradient-to-r from-gold to-transparent mx-auto mt-6"></div>
-                </div>
 
-                {/* Education Section */}
-                <div className="relative z-10">
-                    <div className="text-center mb-16 reveal">
-                        <h4 className="text-2xl md:text-3xl font-serif text-white mb-4">
-                            <span className="text-gold">01.</span> {t('home.experience.eduPath')}
-                        </h4>
-                        <div className="inline-block px-6 py-2 border border-gold/30 bg-[#0a0a0a] rounded-full">
-                            <span className="text-gold text-sm tracking-wider">{t('home.experience.academic')}</span>
+                    {/* Education Section */}
+                    <div className="journey-block">
+                        <div className="journey-sub-header reveal">
+                            <h4 className="journey-sub-title">
+                                <span>01.</span> {t('home.experience.eduPath')}
+                            </h4>
+                            <div className="journey-sub-pill">{t('home.experience.academic')}</div>
+                        </div>
+
+                        <div className="journey-timeline">
+                            {educationData.map((edu, idx) => (
+                                <div key={idx} className="journey-item reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
+                                    <div className="journey-node">
+                                        <i className="fas fa-graduation-cap" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div className="journey-card">
+                                        <div className="journey-card-header">
+                                            <span className="journey-period-badge">
+                                                <i className="far fa-calendar-alt" aria-hidden="true"></i>
+                                                {edu.period}
+                                            </span>
+                                            <span className="journey-meta-pill">
+                                                <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                                {edu.desc.includes('Pekanbaru') || edu.institution.includes('Pekanbaru') || edu.institution.includes('UIN SUSKA')
+                                                    ? 'Pekanbaru, Riau'
+                                                    : 'Online'}
+                                            </span>
+                                        </div>
+
+                                        <h5 className="journey-card-title">{edu.degree}</h5>
+                                        <h6 className="journey-card-subtitle">{edu.institution}</h6>
+                                        <p className="journey-card-desc">{edu.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
-                    <div className="space-y-8">
-                        {educationData.map((edu, idx) => (
-                            <div key={idx} className="reveal" style={{ transitionDelay: `${idx * 200 + 600}ms` }}>
-                                <div className="bg-[#0a0a0a]/90 backdrop-blur-sm border border-gold/20 p-4 md:p-8 rounded-xl hover:border-gold/50 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(198,166,101,0.15)] hover:shadow-[0_0_60px_rgba(198,166,101,0.1)] group relative overflow-hidden">
-                                    {/* Card Background Pattern */}
-                                    <div className="absolute inset-0 opacity-5">
-                                        <div className="absolute top-0 right-0 w-20 h-20 border border-gold rotate-45"></div>
+                    {/* Experience Section */}
+                    <div className="journey-block">
+                        <div className="journey-sub-header reveal">
+                            <h4 className="journey-sub-title">
+                                <span>02.</span> {t('home.experience.expPath')}
+                            </h4>
+                            <div className="journey-sub-pill">{t('home.experience.professional')}</div>
+                        </div>
+
+                        <div className="journey-timeline">
+                            {experienceData.map((exp, idx) => (
+                                <div key={exp.id} className="journey-item reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
+                                    <div className="journey-node">
+                                        <i className={exp.company.includes('Youtube') ? 'fab fa-youtube' : 'fas fa-briefcase'} aria-hidden="true"></i>
                                     </div>
 
-                                    <div className="relative z-10 flex flex-col md:flex-row gap-4 md:gap-6">
-                                        {/* Icon */}
-                                        <div className="flex-shrink-0 flex justify-center md:justify-start">
-                                            <div className="w-12 h-12 md:w-16 md:h-16 bg-[#050505] border-2 border-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                                                <i className="fas fa-graduation-cap text-gold text-lg md:text-xl"></i>
-                                            </div>
+                                    <div className="journey-card">
+                                        <div className="journey-card-header">
+                                            <span className="journey-period-badge">
+                                                <i className="far fa-clock" aria-hidden="true"></i>
+                                                {exp.period}
+                                            </span>
+                                            <span className="journey-meta-pill">
+                                                {exp.company.includes('Universitas') ? 'Education' :
+                                                    exp.company.includes('Koni') ? 'Government' :
+                                                        exp.company.includes('Dinas') ? 'Government' :
+                                                            exp.company.includes('Youtube') ? 'Content' : 'Company'}
+                                            </span>
                                         </div>
 
-                                        {/* Content */}
-                                        <div className="flex-grow">
-                                            {/* Period Badge */}
-                                            <div className="inline-flex items-center gap-2 mb-4">
-                                                <span className="text-gold text-xs font-bold tracking-widest uppercase border border-gold/30 px-3 py-1 bg-[#050505]">{edu.period}</span>
-                                                <div className="w-8 h-px bg-gradient-to-r from-gold to-transparent"></div>
-                                            </div>
-
-                                            {/* Degree and Institution */}
-                                            <h5 className="text-white font-bold text-lg md:text-xl font-serif mb-2 group-hover:text-gold transition-colors">{edu.degree}</h5>
-                                            <h6 className="text-gold/80 text-xs md:text-sm uppercase tracking-wider mb-3 font-light">{edu.institution}</h6>
-                                            <p className="text-gray-400 text-xs md:text-sm leading-relaxed font-light">{edu.desc}</p>
-
-                                            {/* Location Badge */}
-                                            <div className="flex items-center gap-2 mt-4">
-                                                <i className="fas fa-map-marker-alt text-gold/60 text-xs"></i>
-                                                <span className="text-xs text-gold/60">
-                                                    {edu.desc.includes('Pekanbaru') ? 'Pekanbaru, Riau' : 'Online'}
-                                                </span>
-                                            </div>
-                                        </div>
+                                        <h5 className="journey-card-title">{exp.role}</h5>
+                                        <h6 className="journey-card-subtitle">{exp.company}</h6>
+                                        <p className="journey-card-desc">{exp.desc}</p>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Experience Section */}
-                <div className="relative z-10 mb-20">
-                    <div className="text-center mb-16 reveal">
-                        <h4 className="text-2xl md:text-3xl font-serif text-white mb-4">
-                            <span className="text-gold">02.</span> {t('home.experience.expPath')}
-                        </h4>
-                        <div className="inline-block px-6 py-2 border border-gold/30 bg-[#0a0a0a] rounded-full">
-                            <span className="text-gold text-sm tracking-wider">{t('home.experience.professional')}</span>
+                            ))}
                         </div>
                     </div>
 
-                    <div className="space-y-8">
-                        {experienceData.map((exp, idx) => (
-                            <div key={exp.id} className="reveal" style={{ transitionDelay: `${idx * 200}ms` }}>
-                                <div className="bg-[#0a0a0a]/90 backdrop-blur-sm border border-gold/20 p-4 md:p-8 rounded-xl hover:border-gold/50 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(198,166,101,0.15)] hover:shadow-[0_0_60px_rgba(198,166,101,0.1)] group relative overflow-hidden">
-                                    {/* Card Background Pattern */}
-                                    <div className="absolute inset-0 opacity-5">
-                                        <div className="absolute top-0 right-0 w-20 h-20 border border-gold rotate-45"></div>
+                    {/* Publications Section */}
+                    <div id="publications" className="journey-block">
+                        <div className="journey-sub-header reveal">
+                            <h4 className="journey-sub-title">
+                                <span>03.</span> {t('home.publications.pubPath')}
+                            </h4>
+                            <div className="journey-sub-pill">{t('home.publications.academicPub')}</div>
+                        </div>
+
+                        <div className="journey-timeline">
+                            {publicationsData.map((pub, idx) => (
+                                <div key={pub.id} className="journey-item reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
+                                    <div className="journey-node">
+                                        <i className="fas fa-book-open" aria-hidden="true"></i>
                                     </div>
 
-                                    <div className="relative z-10 flex flex-col md:flex-row gap-4 md:gap-6">
-                                        {/* Icon */}
-                                        <div className="flex-shrink-0 flex justify-center md:justify-start">
-                                            <div className="w-12 h-12 md:w-16 md:h-16 bg-[#050505] border-2 border-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                                                <i className="fas fa-building text-gold text-lg md:text-xl"></i>
-                                            </div>
+                                    <div className="journey-card">
+                                        <div className="journey-card-header">
+                                            <span className="journey-period-badge">
+                                                <i className="far fa-calendar-check" aria-hidden="true"></i>
+                                                {pub.year}
+                                            </span>
+                                            <span className="journey-meta-pill">DOI: {pub.doi}</span>
                                         </div>
 
-                                        {/* Content */}
-                                        <div className="flex-grow">
-                                            {/* Period Badge */}
-                                            <div className="inline-flex items-center gap-2 mb-4">
-                                                <span className="text-gold text-xs font-bold tracking-widest uppercase border border-gold/30 px-3 py-1 bg-[#050505]">{exp.period}</span>
-                                                <div className="w-8 h-px bg-gradient-to-r from-gold to-transparent"></div>
-                                            </div>
+                                        <h5 className="journey-card-title">
+                                            <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                                                {pub.title}
+                                            </a>
+                                        </h5>
+                                        <p className="journey-card-authors">{pub.authors}</p>
+                                        <p className="journey-card-journal">{pub.journal}</p>
+                                        <p className="journey-card-desc">{pub.desc}</p>
 
-                                            {/* Role and Company */}
-                                            <h5 className="text-white font-bold text-lg md:text-xl font-serif mb-2 group-hover:text-gold transition-colors">{exp.role}</h5>
-                                            <h6 className="text-gold/80 text-xs md:text-sm uppercase tracking-wider mb-3 font-light">{exp.company}</h6>
-                                            <p className="text-gray-400 text-xs md:text-sm leading-relaxed font-light">{exp.desc}</p>
-
-                                            {/* Company Type Badge */}
-                                            <div className="flex items-center gap-2 mt-4">
-                                                <span className="text-xs px-2 py-1 border border-gold/30 text-gold/60 rounded">
-                                                    {exp.company.includes('Universitas') ? 'Education' :
-                                                        exp.company.includes('Koni') ? 'Government' :
-                                                            exp.company.includes('Dinas') ? 'Government' :
-                                                                exp.company.includes('Youtube') ? 'Content' : 'Company'}
-                                                </span>
-                                            </div>
+                                        <div className="journey-card-footer">
+                                            <a
+                                                href={pub.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="journey-card-link"
+                                            >
+                                                {t('home.publications.readPaper')}
+                                                <span>→</span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                            ))}
+                        </div>
 
-                {/* Bottom decorative separator */}
-                <div className="flex items-center justify-center gap-8 mt-20 opacity-60">
-                    <div className="w-24 h-[1px] bg-gradient-to-r from-transparent to-gold/50"></div>
-                    <div className="w-4 h-4 border border-gold/50 rotate-45"></div>
-                    <div className="w-24 h-[1px] bg-gradient-to-l from-transparent to-gold/50"></div>
+                        <div className="text-center mt-12 reveal">
+                            <a
+                                href="https://scholar.google.co.id/citations?hl=id&view_op=list_works&gmla=AN_4Zu9VbtpQ2M48GQsACqBPB6r9XEroHGqNfAKiDOxNZpvF0atvG_GnVNoxDK6KvJQ6e19zHGMeldISPa0fBeBU7S7MvzYp1u-UJg&user=QQ-mLNAAAAAJ"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-gothic-outline inline-block"
+                            >
+                                <i className="fas fa-graduation-cap mr-2"></i>
+                                {t('home.publications.scholarProfile')}
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Bottom decorative separator */}
+                    <div className="journey-divider">
+                        <div className="journey-divider-line"></div>
+                        <div className="journey-divider-diamond"></div>
+                        <div className="journey-divider-line reverse"></div>
+                    </div>
                 </div>
             </section>
 
